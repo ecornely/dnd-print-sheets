@@ -1,0 +1,485 @@
+{
+  "meta": {
+    "source": "dom",
+    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/damaia.html",
+    "extractedAt": "2026-11-25T07:52:45.065Z",
+    "characterId": null,
+    "units": {
+      "distance": "ft.",
+      "weight": "lb."
+    }
+  },
+  "name": "Damaia Dread",
+  "level": 2,
+  "xp": 0,
+  "race": "Tiefling",
+  "size": "Medium or Small",
+  "background": "Damaia Dread's background",
+  "alignment": "Chaotic Good",
+  "classes": [
+    {
+      "name": "Bard",
+      "level": 2,
+      "subclass": null
+    }
+  ],
+  "spellcasting": [
+    {
+      "className": "Bard",
+      "ability": "CHA",
+      "modifier": 3,
+      "attack": 5,
+      "saveDc": 13
+    }
+  ],
+  "abilities": {
+    "STR": {
+      "score": 9,
+      "modifier": -1
+    },
+    "DEX": {
+      "score": 14,
+      "modifier": 2
+    },
+    "CON": {
+      "score": 15,
+      "modifier": 2
+    },
+    "INT": {
+      "score": 10,
+      "modifier": 0
+    },
+    "WIS": {
+      "score": 12,
+      "modifier": 1
+    },
+    "CHA": {
+      "score": 16,
+      "modifier": 3
+    }
+  },
+  "savingThrows": {
+    "STR": {
+      "value": -1,
+      "proficient": false
+    },
+    "DEX": {
+      "value": 4,
+      "proficient": true
+    },
+    "CON": {
+      "value": 2,
+      "proficient": false
+    },
+    "INT": {
+      "value": 0,
+      "proficient": false
+    },
+    "WIS": {
+      "value": 1,
+      "proficient": false
+    },
+    "CHA": {
+      "value": 5,
+      "proficient": true
+    }
+  },
+  "skills": [
+    {
+      "name": "Acrobatics",
+      "ability": "DEX",
+      "value": 6,
+      "proficiency": "expertise"
+    },
+    {
+      "name": "Animal Handling",
+      "ability": "WIS",
+      "value": 2,
+      "proficiency": "half"
+    },
+    {
+      "name": "Arcana",
+      "ability": "INT",
+      "value": 2,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Athletics",
+      "ability": "STR",
+      "value": 1,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Deception",
+      "ability": "CHA",
+      "value": 4,
+      "proficiency": "half"
+    },
+    {
+      "name": "History",
+      "ability": "INT",
+      "value": 1,
+      "proficiency": "half"
+    },
+    {
+      "name": "Insight",
+      "ability": "WIS",
+      "value": 2,
+      "proficiency": "half"
+    },
+    {
+      "name": "Intimidation",
+      "ability": "CHA",
+      "value": 4,
+      "proficiency": "half"
+    },
+    {
+      "name": "Investigation",
+      "ability": "INT",
+      "value": 1,
+      "proficiency": "half"
+    },
+    {
+      "name": "Medicine",
+      "ability": "WIS",
+      "value": 2,
+      "proficiency": "half"
+    },
+    {
+      "name": "Nature",
+      "ability": "INT",
+      "value": 1,
+      "proficiency": "half"
+    },
+    {
+      "name": "Perception",
+      "ability": "WIS",
+      "value": 2,
+      "proficiency": "half"
+    },
+    {
+      "name": "Performance",
+      "ability": "CHA",
+      "value": 7,
+      "proficiency": "expertise"
+    },
+    {
+      "name": "Persuasion",
+      "ability": "CHA",
+      "value": 4,
+      "proficiency": "half"
+    },
+    {
+      "name": "Religion",
+      "ability": "INT",
+      "value": 1,
+      "proficiency": "half"
+    },
+    {
+      "name": "Sleight of Hand",
+      "ability": "DEX",
+      "value": 3,
+      "proficiency": "half"
+    },
+    {
+      "name": "Stealth",
+      "ability": "DEX",
+      "value": 4,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Survival",
+      "ability": "WIS",
+      "value": 2,
+      "proficiency": "half"
+    }
+  ],
+  "proficiencyBonus": 2,
+  "armorClass": 13,
+  "initiative": 2,
+  "speed": "30 ft.",
+  "passivePerception": 12,
+  "carryingCapacity": 135,
+  "pushDragLift": 270,
+  "hp": {
+    "current": 17,
+    "max": 17,
+    "temp": null
+  },
+  "hitDice": "2d8",
+  "deathSaves": {
+    "successes": null,
+    "failures": null
+  },
+  "coins": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 25,
+    "pp": 0
+  },
+  "attacks": [
+    {
+      "name": "Dagger",
+      "bonus": "+4",
+      "damage": "1d4+2 Piercing",
+      "properties": "20/60 ft., Finesse, Light, Thrown, Nick"
+    },
+    {
+      "name": "Rapier",
+      "bonus": "+2",
+      "damage": "1d8+2 Piercing",
+      "properties": "5 ft., Finesse, Vex"
+    }
+  ],
+  "defenses": {
+    "resistances": [
+      {
+        "type": "resistance",
+        "value": "Fire"
+      }
+    ],
+    "immunities": [],
+    "vulnerabilities": []
+  },
+  "proficiencies": {
+    "armor": [
+      "Light Armor"
+    ],
+    "weapons": [
+      "Simple Weapons"
+    ],
+    "tools": [
+      "Disguise Kit",
+      "Drum",
+      "Harp",
+      "Lute",
+      "Viol"
+    ],
+    "languages": [
+      "Common",
+      "Common Sign Language",
+      "Elvish",
+      "Infernal"
+    ]
+  },
+  "features": [
+    {
+      "name": "Dark Bargain",
+      "section": "FEATS",
+      "description": "At your GM's discretion, you can take a Dark Bargain."
+    },
+    {
+      "name": "Character Threads",
+      "section": "FEATS",
+      "description": "Threads are aspects added to characters at any time during their career that have a specific short or long-term goal."
+    },
+    {
+      "name": "Runestones",
+      "section": "FEATS",
+      "description": "At the beginning of the Northlands Sagas adventure path, each player should draw one Runestone randomly."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Backpack",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Bedroll",
+      "quantity": 1,
+      "weight": 7
+    },
+    {
+      "name": "Bell",
+      "quantity": 1,
+      "weight": 0
+    },
+    {
+      "name": "Boots",
+      "quantity": 1,
+      "weight": 0
+    },
+    {
+      "name": "Bullseye Lantern",
+      "quantity": 1,
+      "weight": 2
+    },
+    {
+      "name": "Costume",
+      "quantity": 3,
+      "weight": 4
+    },
+    {
+      "name": "Dagger",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Dagger",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Leather",
+      "quantity": 1,
+      "weight": 10
+    },
+    {
+      "name": "Lute",
+      "quantity": 1,
+      "weight": 2
+    },
+    {
+      "name": "Mirror",
+      "quantity": 1,
+      "weight": 0.5
+    },
+    {
+      "name": "Oil",
+      "quantity": 5,
+      "weight": 1
+    },
+    {
+      "name": "Rapier",
+      "quantity": 1,
+      "weight": 2
+    },
+    {
+      "name": "Rations",
+      "quantity": 4,
+      "weight": 2
+    },
+    {
+      "name": "Tinderbox",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Waterskin",
+      "quantity": 1,
+      "weight": 5
+    }
+  ],
+  "spells": [
+    {
+      "name": "Cure Wounds",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "1 Action",
+      "range": "Touch",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Disguise Self",
+      "level": 1,
+      "school": "Illusion",
+      "castingTime": "1 Action",
+      "range": "Self",
+      "duration": "1 Hour",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Dancing Lights",
+      "level": 0,
+      "school": "Illusion",
+      "castingTime": "1 Action",
+      "range": "120 ft.",
+      "duration": "Conc. 1 Minute",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Mage Hand",
+      "level": 0,
+      "school": "Conjuration",
+      "castingTime": "1 Action",
+      "range": "30 ft.",
+      "duration": "1 Minute",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Comprehend Languages",
+      "level": 1,
+      "school": "Divination",
+      "castingTime": "1 Action",
+      "range": "Self",
+      "duration": "1 Hour",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Speak with Animals",
+      "level": 1,
+      "school": "Divination",
+      "castingTime": "1 Action",
+      "range": "Self",
+      "duration": "10 Minutes",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Tasha's Hideous Laughter",
+      "level": 1,
+      "school": "Enchantment",
+      "castingTime": "1 Action",
+      "range": "30 ft.",
+      "duration": "Conc. 1 Minute",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Fire Bolt",
+      "level": 0,
+      "school": "Evocation",
+      "castingTime": "1 Action",
+      "range": "120 ft.",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": false
+    },
+    {
+      "name": "Thaumaturgy",
+      "level": 0,
+      "school": "Transmutation",
+      "castingTime": "1 Action",
+      "range": "30 ft.",
+      "duration": "1 Minute",
+      "damaging": false,
+      "prepared": false
+    }
+  ],
+  "spellSlots": [
+    3
+  ],
+  "personality": {
+    "traits": [
+      "Je refuse de passer inaperçue. Si le monde doit me regarder, je ferai en sorte qu'il ne puisse plus détacher ses yeux de ma lumière et de mes couleurs."
+    ],
+    "ideals": [
+      "Expression de soi : \"L'art et la beauté sont les plus belles barrières contre l'obscurité. Tout le monde devrait avoir le droit d'être exactement qui il veut.\""
+    ],
+    "bonds": [
+      "\"Ma tante Lyra m'a tout donné et m'a protégée de la haine du monde. Je veux devenir assez forte pour qu'elle n'ait plus jamais à avoir peur pour moi, et lever le voile sur l'identité de mon père.\""
+    ],
+    "flaws": [
+      "La peur du rejet : \"Je suis terrifiée à l'idée que les gens découvrent ce que je suis réellement sous mes cheveux pastels. Si mon secret est menacé d'être révélé, je peux agir de manière impulsive ou fuir la situation...\""
+    ],
+    "appearance": []
+  },
+  "appearance": {
+    "age": "15",
+    "eyes": "Fuschia",
+    "height": "165cm",
+    "hair": "Pastel",
+    "skin": "Claire avec des marques tribal fuschia",
+    "weight": "121"
+  },
+  "backstory": "Élevée par sa tante au sein d’une troupe d’artistes itinérants, Damaia Dread grandit en ignorant tout de ses parents, si ce n'est ses traits démoniaques (chaleur corporelle, yeux brillants et cornes naissantes) habilement dissimulés sous une excentricité de scène et des coiffures colorées. En canalisant son héritage magique à travers le chant, le maniement des lames et des performances acrobatiques de Barde, elle transforme son énergie démoniaque en véritables spectacles. À l'âge adulte, alors que la pousse de ses cornes menace son camouflage, sa tante lui révèle que son père est un démon issu d'un autre plan. Armée de son talent et de son style unique, Damaia prend la route pour apprendre à maîtriser sa part d'ombre et retrouver la trace de ce père mystérieux.",
+  "allies": null
+}

@@ -1,0 +1,28 @@
+{
+  "name": "dnd-print-sheets",
+  "version": "0.1.0",
+  "description": "Fiches de personnage D&D imprimables A4, thémables par blocks (JSON) + CSS",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "dnd-print": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run build && tsx src/server.ts",
+    "render": "tsx src/cli.ts",
+    "render:oros": "tsx src/cli.ts --theme default fixtures/oros.character.json -o dist/oros.html",
+    "test": "tsx test/render.test.ts && tsx test/script.test.ts && tsc --noEmit"
+  },
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "jsdom": "^31.0.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

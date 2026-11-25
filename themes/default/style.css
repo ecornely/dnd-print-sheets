@@ -1,0 +1,688 @@
+/* Thème "default" — fiche de personnage D&D remplissable, façon fiche papier.
+ * Structure : chaque page = .sheet-page (une feuille A4 Ctrl+P),
+ * le contenu vit dans .sheet-content. Les boîtes sont des encadrés carrés
+ * (.box), les ronds/cases de maîtrise sont cochables (.t), le script du thème
+ * (script.js) recalcule bonus, emplacements et poids.
+ * Tout est scopé sous .sheet-page pour ne pas fuiter dans le chrome de l'app. */
+
+@page {
+  size: A4;
+  /* Marge de la boîte de page : s'applique à toutes les pages imprimées,
+     y compris les pages de débordement (longues listes de sorts). */
+  margin: 9mm;
+}
+
+:root {
+  --ink: #1f1d1a;
+  --line: #8c9091;
+  --acc: #3d4a4f;
+  --soft: #eef0f0;
+}
+
+/* ---------- Feuilles A4 ---------- */
+
+.sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+  background: #cfd2d2;
+  min-height: 100vh;
+}
+
+.sheet-page {
+  width: 210mm;
+  min-height: 296mm;
+  padding: 9mm;
+  background: #fff;
+  color: var(--ink);
+  font: 8.5pt/1.25 Arial, Helvetica, sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.sheet-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sheet-page-title {
+  display: none;
+}
+
+.sheet-footer {
+  margin-top: 4px;
+  text-align: right;
+  font-size: 6.5pt;
+  color: #aaa;
+}
+
+/* ---------- Éléments de formulaire ---------- */
+
+.sheet-page input,
+.sheet-page select {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px dotted var(--line);
+  background: transparent;
+  padding: 1px 2px;
+  min-width: 0;
+  font: 8.5pt/1.25 Arial, Helvetica, sans-serif;
+}
+
+.sheet-page textarea {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  resize: none;
+  padding: 1px 2px;
+  display: block;
+  font: 8.5pt/1.25 Arial, Helvetica, sans-serif;
+}
+
+.sheet-page input:focus,
+.sheet-page textarea:focus,
+.sheet-page select:focus {
+  outline: 2px solid #6c8f9a;
+  outline-offset: 1px;
+}
+
+.sheet-page label {
+  font-size: 7pt;
+  color: #555;
+  display: block;
+}
+
+.sheet-page input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.sheet-page input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* ---------- Titres ---------- */
+
+.sheet-page h1 {
+  font: 700 17pt Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.sheet-page h3 {
+  font: 700 8.5pt Arial, Helvetica, sans-serif;
+  margin: 0 0 2px;
+  color: var(--acc);
+}
+
+.sheet-page .head h1 input {
+  font: 700 18pt Arial, Helvetica, sans-serif;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+/* ---------- Boîtes ---------- */
+
+.sheet-page .box {
+  border: 1.3px solid var(--ink);
+  border-radius: 5px;
+  padding: 3px 6px 4px;
+  background: #fff;
+}
+
+.sheet-page .cell {
+  border: 1.3px solid var(--ink);
+  border-radius: 5px;
+  padding: 3px 6px 4px;
+  text-align: center;
+}
+
+/* Zones de texte compactes (armes, armures, outils, langues, défenses) */
+.sheet-page .block-fillBox.tight textarea {
+  font-size: 7pt;
+  line-height: 1.35;
+}
+
+/* Textarea qui grandit avec son contenu (pas d'ascenseur).
+ * Le plancher de hauteur (ex 4 lignes) vient d'un min-height inline
+ * émis par le rendu d'après rows ; box-sizing border-box pour que ce
+ * min-height comprenne le padding (2px total). */
+.sheet-page textarea.autogrow {
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Boîtes sans bordure englobante (monnaie, poids) */
+.sheet-page .nobox {
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+/* ---------- Ronds et cases cochables ---------- */
+
+.sheet-page .t {
+  cursor: pointer;
+}
+
+.sheet-page .d {
+  width: 2.7mm;
+  height: 2.7mm;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  display: inline-block;
+  flex: none;
+}
+
+.sheet-page .cb {
+  width: 3.3mm;
+  height: 3.3mm;
+  border: 1px solid var(--ink);
+  border-radius: 1px;
+  display: inline-block;
+  flex: none;
+}
+
+.sheet-page .d.on,
+.sheet-page .cb.on {
+  background: var(--ink);
+}
+
+/* Demi-maîtrise : moitié gauche remplie (bonus = ⌊PB/2⌋).
+ * proficient remplit le rond de gauche, expertise les deux ronds,
+ * half n'en remplit que la moitié. */
+.sheet-page .d.half {
+  background: linear-gradient(to right, var(--ink) 50%, transparent 50%);
+}
+
+/* Un demi-rond cliqué devient un rond plein */
+.sheet-page .d.half.on {
+  background: var(--ink);
+}
+
+.sheet-page .x {
+  visibility: hidden;
+}
+
+.sheet-page .star {
+  font-size: 16pt;
+  line-height: 1;
+}
+
+.sheet-page .star::before {
+  content: "☆";
+}
+
+.sheet-page .star.on::before {
+  content: "★";
+}
+
+/* ---------- Identité (haut de page 1) ---------- */
+
+.sheet-page .block-identity .head {
+  display: grid;
+  grid-template-columns: 1fr 18mm;
+  gap: 6mm;
+  align-items: end;
+  margin-bottom: 4px;
+}
+
+.sheet-page .block-identity .head .st {
+  text-align: center;
+}
+
+.sheet-page .block-identity .id {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px 12mm;
+  margin-bottom: 6px;
+}
+
+/* ---------- Corps de la page 1 ---------- */
+
+.sheet-page .block-container.main {
+  display: grid;
+  grid-template-columns: 64mm 1fr;
+  gap: 5mm;
+  align-items: start;
+  flex: 1;
+}
+
+.sheet-page .block-container.col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sheet-page .block-container.col .grow {
+  flex: 1;
+}
+
+.sheet-page .block-container.col .grow textarea {
+  height: 100%;
+  min-height: 14mm;
+}
+
+.sheet-page .g2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.sheet-page .g3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.sheet-page .g4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px 8px;
+}
+
+.sheet-page .g5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+
+/* Cases de stats du haut (CA, initiative...) */
+
+.sheet-page .block-fillBox.core .cell input,
+.sheet-page .block-fillBox.core .cell output {
+  font: 700 15pt Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: block;
+  border: 0;
+  height: 8mm;
+  line-height: 8mm;
+}
+
+.sheet-page .block-fillBox.core .cell input.sm {
+  font: 600 9pt Arial, Helvetica, sans-serif;
+  height: 8mm;
+}
+
+/* Points de vie */
+
+.sheet-page .block-fillBox.hp .g3 input {
+  font: 700 12pt Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* Jets contre la mort : une seule ligne « Échecs o o o / o o o Réussites » */
+.sheet-page .block-fillBox.death .row {
+  display: inline-flex;
+  margin: 0;
+  height: 6.7mm;
+  line-height: 6.7mm;
+  vertical-align: middle;
+}
+
+.sheet-page .block-fillBox.death .row small {
+  flex: none;
+  padding: 0 2px;
+}
+
+/* Séparateur entre les deux groupes de cercles */
+.sheet-page .block-fillBox.death .row:first-of-type::after {
+  content: "/";
+  font-weight: 600;
+  margin: 0 4px;
+}
+
+/* Le libellé « Réussites » se place après ses cercles */
+.sheet-page .block-fillBox.death .row:last-of-type {
+  flex-direction: row-reverse;
+}
+
+/* Épuisement */
+
+.sheet-page .block-fillBox.exhaust .row {
+  justify-content: space-between;
+}
+.sheet-page .block-fillBox.exhaust small {
+  display: none;
+}
+
+.sheet-page .block-fillBox.exhaust .n {
+  font-size: 7pt;
+  text-align: center;
+  display: block;
+}
+
+/* ---------- Feuille de caractéristiques (colonne gauche) ---------- */
+
+.sheet-page .ab {
+  border: 1.3px solid var(--ink);
+  border-radius: 5px;
+  padding: 3px 5px 4px;
+  margin-bottom: 4px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 5px;
+}
+
+.sheet-page .ab h3 {
+  grid-column: 1 / -1;
+  border-bottom: 1px solid var(--line);
+  font-size: 9.5pt;
+}
+
+.sheet-page .cir {
+  width: 19mm;
+  height: 19mm;
+  border: 1.3px solid var(--ink);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-top: 2px;
+}
+
+.sheet-page .cir .mod {
+  font: 700 15pt Arial, Helvetica, sans-serif;
+  line-height: 1;
+}
+
+.sheet-page .cir .sc {
+  width: 9mm;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 8pt;
+  padding: 0;
+  margin-top: 1px;
+}
+
+.sheet-page .r {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 4.7mm;
+}
+
+.sheet-page .r .l {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sheet-page .r output {
+  font-weight: 600;
+  min-width: 7mm;
+  text-align: right;
+}
+
+/* ---------- Rangs de cercles (jets de mort, épuisement) ---------- */
+
+.sheet-page .row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 0;
+}
+
+.sheet-page .row small {
+  font-size: 7pt;
+  color: #555;
+}
+
+/* Largeur fixe du libellé : les cercles des lignes successives
+   (Réussites / Échecs) démarrent au même cran */
+.sheet-page .block-fillBox .row small {
+  flex: 0 0 15mm;
+}
+
+.sheet-page .row span {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Tableaux ---------- */
+
+.sheet-page table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.sheet-page th {
+  font-size: 7pt;
+  font-weight: 600;
+  text-align: left;
+  color: #555;
+  border-bottom: 1.3px solid var(--ink);
+  padding: 1px 2px;
+}
+
+.sheet-page td {
+  border-bottom: 1px solid #c5c8c8;
+  height: 6mm;
+  padding: 0 1px;
+}
+
+.sheet-page td input {
+  border: 0;
+  height: 5.6mm;
+}
+
+.sheet-page td.p {
+  text-align: center;
+  width: 10mm;
+}
+
+.sheet-page .add {
+  background: var(--soft);
+  border: 1px dashed var(--line);
+  border-radius: 3px;
+  font-size: 7.5pt;
+  padding: 1px 8px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+/* ---------- Page 2 : actions & sorts ---------- */
+
+.sheet-page .block-fillBox.actions .g3 textarea {
+  height: 36mm;
+  border: 1px solid #c5c8c8;
+  border-radius: 3px;
+}
+
+.sheet-page .block-fillBox.spellcast .g4 {
+  grid-template-columns: 36mm repeat(2, 22mm) 1fr;
+  gap: 6px;
+  align-items: end;
+}
+
+.sheet-page .block-fillBox.spellcast output {
+  font: 700 15pt Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: block;
+  line-height: 8mm;
+}
+
+.sheet-page .block-container.companion .block-spellSlots {
+  margin-top: 5px;
+}
+
+.sheet-page #slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 8px;
+}
+
+.sheet-page .sl {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 5.6mm;
+}
+
+.sheet-page .sl b {
+  width: 11mm;
+  font-weight: 600;
+}
+
+.sheet-page .sl input {
+  width: 8mm;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0;
+}
+
+.sheet-page .sl .bx {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.sheet-page .lvl {
+  break-inside: avoid;
+  margin-bottom: 5px;
+}
+
+.sheet-page .lvl h3 {
+  border-bottom: 0;
+}
+
+/* Gabarit de niveau (cloné par « + Niveau ») : jamais visible */
+.sheet-page .lvl-template {
+  display: none;
+}
+
+/* Boutons de manipulation (masqués à l'impression via .no-print) */
+/* Bouton de retrait d'une ligne : dans la marge droite de la feuille,
+   à côté de la ligne (et hors de la cellule Notes). */
+.sheet-page td.rm-cell {
+  position: relative;
+}
+
+.sheet-page .rm,
+.sheet-page .rm-lvl,
+.sheet-page .add-lvl {
+  background: var(--soft);
+  border: 1px dashed var(--line);
+  border-radius: 3px;
+  font-size: 7.5pt;
+  cursor: pointer;
+}
+
+.sheet-page .rm {
+  position: absolute;
+  right: -9mm;
+  top: 0.7mm;
+  padding: 0 4px;
+}
+
+.sheet-page .rm-lvl {
+  padding: 1px 6px;
+  margin: 2px 0 0 6px;
+}
+
+.sheet-page .add-lvl {
+  padding: 1px 8px;
+  margin-top: 2px;
+}
+
+/* ---------- Page 3 : inventaire ---------- */
+
+.sheet-page .block-container.inv-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 5px;
+}
+
+.sheet-page #wt {
+  font: 700 12pt Arial, Helvetica, sans-serif;
+}
+
+.sheet-page .block-fillBox.coins .cell input {
+  font: 700 12pt Arial, Helvetica, sans-serif;
+  text-align: center;
+  border: 0;
+}
+
+/* ---------- Page 4 : personnage & histoire ---------- */
+
+.sheet-page .block-fillBox.appearance,
+.sheet-page .block-fillBox.story {
+  flex: 1;
+}
+
+.sheet-page .block-fillBox.appearance textarea {
+  border: 1px solid #c5c8c8;
+  border-radius: 3px;
+}
+
+.sheet-page .block-fillBox.story textarea {
+  height: 100%;
+  min-height: 60mm;
+}
+
+/* ---------- Impression ---------- */
+
+@media print {
+  /* display:block : sans ça, les .sheet-page en width:auto étaient
+     dimensionnées au contenu (align-items: center d'un flex en
+     colonne) et la page de débordement ne prenait pas toute la
+     largeur imprimable. */
+  .sheet {
+    display: block;
+    padding: 0;
+    gap: 0;
+    background: none;
+    min-height: 0;
+  }
+
+  .sheet-page {
+    width: auto;
+    /* height:auto : un contenu plus long (beaucoup de sorts) se verse
+       sur les pages imprimées suivantes au lieu d'être rogné ; les marges
+       viennent de @page (mêmes marges sur les pages de débordement). */
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .sheet-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .sheet-page input,
+  .sheet-page textarea,
+  .sheet-page select {
+    border-color: #bbb;
+  }
+
+  .sheet-page input::placeholder {
+    color: transparent;
+  }
+}

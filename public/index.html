@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dnd-print-sheets</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%2358180d'/%3E%3Ctext x='8' y='12' text-anchor='middle' font-size='10' fill='%23ffe9a8' font-family='Georgia'%3ED%26D%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/app.css">
+<style id="theme-style"></style>
+</head>
+<body>
+
+<header class="toolbar no-print">
+  <span class="brand">dnd-print-sheets</span>
+
+  <label class="field">
+    <span>Thème</span>
+    <select id="theme-select"></select>
+  </label>
+
+  <label class="file-button">
+    <input type="file" id="file-input" accept=".json,application/json" hidden>
+    <span>Charger un JSON…</span>
+  </label>
+
+  <button id="fixture-oros" type="button" class="link-button">Exemple : Oros</button>
+  <button id="fixture-damaia" type="button" class="link-button">Exemple : Damaia</button>
+
+  <span id="status" class="status"></span>
+
+  <button id="print-button" type="button" class="primary" disabled>Imprimer</button>
+</header>
+
+<div id="drag-overlay" class="drag-overlay no-print" hidden>
+  <p>Dépose ton JSON de personnage…</p>
+</div>
+
+<main id="sheet" class="sheet" hidden></main>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>

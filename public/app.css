@@ -1,0 +1,137 @@
+/* Chrome de l'application (barre d'outils, drop zone) — non imprimé.
+ * Le style des fiches vient entièrement du thème (injecté dans #theme-style). */
+
+:root {
+  --bar-bg: #2b2117;
+  --bar-ink: #f3ead7;
+  --accent: #c9a15c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #e8e4da;
+  font-family: "Georgia", serif;
+}
+
+/* ---------- Barre d'outils ---------- */
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 16px;
+  background: var(--bar-bg);
+  color: var(--bar-ink);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.brand {
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+  margin-right: auto;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-variant: small-caps;
+}
+
+.field select {
+  font: inherit;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid #6a5a41;
+  background: #f7f2e5;
+  color: #2b2117;
+}
+
+.file-button,
+.link-button,
+.primary {
+  font: inherit;
+  padding: 5px 12px;
+  border-radius: 4px;
+  border: 1px solid #6a5a41;
+  background: #45362a;
+  color: var(--bar-ink);
+  cursor: pointer;
+}
+
+.file-button:hover,
+.link-button:hover,
+.primary:hover {
+  background: #584535;
+}
+
+.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #2b2117;
+  font-weight: bold;
+}
+
+.primary:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.status {
+  font-size: 0.85em;
+  color: #b8a98d;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- Overlay de glisser-déposer ---------- */
+
+.drag-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  background: rgba(43, 33, 23, 0.75);
+  color: var(--bar-ink);
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+  pointer-events: none;
+}
+
+.drag-overlay p {
+  border: 2px dashed var(--accent);
+  border-radius: 12px;
+  padding: 40px 64px;
+  background: rgba(43, 33, 23, 0.6);
+}
+
+.drag-overlay[hidden] {
+  display: none;
+}
+
+/* ---------- Impression : uniquement la fiche ---------- */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: none;
+  }
+
+  #sheet[hidden] {
+    display: block !important;
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "meta": {
+    "source": "dom",
+    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/oros-spells-tab.html",
+    "extractedAt": "2026-11-25T07:52:46.622Z",
+    "characterId": null,
+    "units": {
+      "distance": "ft.",
+      "weight": "lb."
+    }
+  },
+  "name": "Oros Telluros",
+  "level": 2,
+  "xp": 0,
+  "race": "Earth Genasi",
+  "size": "Medium",
+  "background": "Oros",
+  "alignment": "Neutral",
+  "classes": [
+    {
+      "name": "Druid",
+      "level": 2,
+      "subclass": null
+    }
+  ],
+  "spellcasting": [
+    {
+      "className": "Druid",
+      "ability": "WIS",
+      "modifier": 3,
+      "attack": 5,
+      "saveDc": 13
+    }
+  ],
+  "abilities": {
+    "STR": {
+      "score": 13,
+      "modifier": 1
+    },
+    "DEX": {
+      "score": 12,
+      "modifier": 1
+    },
+    "CON": {
+      "score": 16,
+      "modifier": 3
+    },
+    "INT": {
+      "score": 10,
+      "modifier": 0
+    },
+    "WIS": {
+      "score": 16,
+      "modifier": 3
+    },
+    "CHA": {
+      "score": 8,
+      "modifier": -1
+    }
+  },
+  "savingThrows": {
+    "STR": {
+      "value": 1,
+      "proficient": false
+    },
+    "DEX": {
+      "value": 1,
+      "proficient": false
+    },
+    "CON": {
+      "value": 3,
+      "proficient": false
+    },
+    "INT": {
+      "value": 2,
+      "proficient": true
+    },
+    "WIS": {
+      "value": 5,
+      "proficient": true
+    },
+    "CHA": {
+      "value": -1,
+      "proficient": false
+    }
+  },
+  "skills": [
+    {
+      "name": "Acrobatics",
+      "ability": "DEX",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Animal Handling",
+      "ability": "WIS",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Arcana",
+      "ability": "INT",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Athletics",
+      "ability": "STR",
+      "value": 3,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Deception",
+      "ability": "CHA",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "History",
+      "ability": "INT",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Insight",
+      "ability": "WIS",
+      "value": 5,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Intimidation",
+      "ability": "CHA",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Investigation",
+      "ability": "INT",
+      "value": 2,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Medicine",
+      "ability": "WIS",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Nature",
+      "ability": "INT",
+      "value": 5,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Perception",
+      "ability": "WIS",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Performance",
+      "ability": "CHA",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Persuasion",
+      "ability": "CHA",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Religion",
+      "ability": "INT",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Sleight of Hand",
+      "ability": "DEX",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Stealth",
+      "ability": "DEX",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Survival",
+      "ability": "WIS",
+      "value": 5,
+      "proficiency": "proficient"
+    }
+  ],
+  "proficiencyBonus": 2,
+  "armorClass": 13,
+  "initiative": 1,
+  "speed": "30 ft.",
+  "passivePerception": 13,
+  "carryingCapacity": 195,
+  "pushDragLift": 390,
+  "hp": {
+    "current": 19,
+    "max": 19,
+    "temp": null
+  },
+  "hitDice": "2d8",
+  "deathSaves": {
+    "successes": null,
+    "failures": null
+  },
+  "coins": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 25,
+    "pp": 0
+  },
+  "attacks": [
+    {
+      "name": "Club",
+      "bonus": "+3",
+      "damage": "1d4+1 Bludgeoning",
+      "properties": "5 ft., Light, Slow"
+    },
+    {
+      "name": "Sling",
+      "bonus": "+3",
+      "damage": "1d4+1 Bludgeoning",
+      "properties": "30/120 ft., Ammunition, Range, Slow"
+    }
+  ],
+  "defenses": {
+    "resistances": [],
+    "immunities": [],
+    "vulnerabilities": []
+  },
+  "proficiencies": {
+    "armor": [
+      "Light Armor",
+      "Shields"
+    ],
+    "weapons": [
+      "Simple Weapons"
+    ],
+    "tools": [
+      "Darts",
+      "Herbalism Kit",
+      "Leatherworker's Tools"
+    ],
+    "languages": [
+      "Common",
+      "Druidic",
+      "Primordial"
+    ]
+  },
+  "features": [
+    {
+      "name": "Magic Initiate (Druid)",
+      "section": "FEATS",
+      "description": "Origin Feat You gain the following benefits. Two Cantrips. You learn two cantrips of your choice from the Druid spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat’s spells (choose when you select this feat). Level 1 Spell. Choose a level 1 spell from the same list you selected for this feat’s cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have. Spell Change. Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list. Repeatable. You can take this feat more than once, but you must choose a different spell list each time."
+    },
+    {
+      "name": "Dark Bargain",
+      "section": "FEATS",
+      "description": "At your GM's discretion, you can take a Dark Bargain."
+    },
+    {
+      "name": "Character Threads",
+      "section": "FEATS",
+      "description": "Threads are aspects added to characters at any time during their career that have a specific short or long-term goal."
+    },
+    {
+      "name": "Runestones",
+      "section": "FEATS",
+      "description": "At the beginning of the Northlands Sagas adventure path, each player should draw one Runestone randomly."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Backpack",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Bark",
+      "quantity": 1,
+      "weight": 10
+    },
+    {
+      "name": "Bedroll",
+      "quantity": 1,
+      "weight": 7
+    },
+    {
+      "name": "Club",
+      "quantity": 1,
+      "weight": 2
+    },
+    {
+      "name": "Herbalism Kit",
+      "quantity": 1,
+      "weight": 3
+    },
+    {
+      "name": "Oil",
+      "quantity": 2,
+      "weight": 1
+    },
+    {
+      "name": "Rations",
+      "quantity": 5,
+      "weight": 2
+    },
+    {
+      "name": "Rope",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Sling",
+      "quantity": 1,
+      "weight": 0
+    },
+    {
+      "name": "Tinderbox",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Torch",
+      "quantity": 10,
+      "weight": 1
+    },
+    {
+      "name": "Waterskin",
+      "quantity": 1,
+      "weight": 5
+    }
+  ],
+  "spells": [
+    {
+      "name": "Guidance",
+      "level": 0,
+      "school": "Divination",
+      "castingTime": "1 Action",
+      "range": "Touch",
+      "duration": "Conc. 1 Minute",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Thunderclap",
+      "level": 0,
+      "school": "Evocation",
+      "castingTime": "1 Action",
+      "range": "Self",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": false
+    },
+    {
+      "name": "Entangle",
+      "level": 1,
+      "school": "Conjuration",
+      "castingTime": "1 Action",
+      "range": "90 ft.",
+      "duration": "Conc. 1 Minute",
+      "damaging": false,
+      "prepared": true
+    },
+    {
+      "name": "Earth Tremor",
+      "level": 1,
+      "school": "Evocation",
+      "castingTime": "1 Action",
+      "range": "10 ft.",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": true
+    },
+    {
+      "name": "Healing Word",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "Reaction",
+      "range": "60 ft.",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": true
+    },
+    {
+      "name": "Thunderwave",
+      "level": 1,
+      "school": "Evocation",
+      "castingTime": "1 Action",
+      "range": "Self",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": true
+    },
+    {
+      "name": "Absorb Elements",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "1 Turn",
+      "range": "Self",
+      "duration": "1 Round",
+      "damaging": true,
+      "prepared": true
+    },
+    {
+      "name": "Pass without Trace",
+      "level": 2,
+      "school": "Abjuration",
+      "castingTime": "1 Action",
+      "range": "Self",
+      "duration": "Conc. 1 Hour",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Speak with Animals",
+      "level": 1,
+      "school": "Divination",
+      "castingTime": "1 Action",
+      "range": "Self",
+      "duration": "10 Minutes",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Find Familiar",
+      "level": 1,
+      "school": "Conjuration",
+      "castingTime": "1 Hour",
+      "range": "10 ft.",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Shillelagh",
+      "level": 0,
+      "school": "Transmutation",
+      "castingTime": "Reaction",
+      "range": "Self",
+      "duration": "1 Minute",
+      "damaging": true,
+      "prepared": false
+    },
+    {
+      "name": "Mold Earth",
+      "level": 0,
+      "school": "Transmutation",
+      "castingTime": "1 Action",
+      "range": "30 ft.",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Message",
+      "level": 0,
+      "school": "Transmutation",
+      "castingTime": "1 Action",
+      "range": "120 ft.",
+      "duration": "1 Round",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Cure Wounds",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "1 Action",
+      "range": "Touch",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    }
+  ],
+  "spellSlots": [
+    3
+  ],
+  "personality": {
+    "traits": [
+      "Je suis calme, très patient et rarement déstabilisé par le danger. J'ai pris l'habitude de toucher la terre ou la pierre environnante pour garder mon ancrage et réfléchir avant d'agir"
+    ],
+    "ideals": [
+      "Équilibre & Protection. La terre est le bouclier du monde ; mon devoir est de protéger l'ordre naturel et d'être un abri inébranlable pour ceux qui m'entourent"
+    ],
+    "bonds": [
+      "Ma géode sacrée et les enseignements de Frère Caelen sont mes plus précieux trésors. Je voyage pour accomplir mon devoir de Druide et honorer le don que la terre m'a offert"
+    ],
+    "flaws": [
+      "Mon rejet passé par mes propres parents a laissé une blessure secrète. J'ai du mal à accorder pleinement ma confiance aux gens des villes, que je trouve superficiels et changeants"
+    ],
+    "appearance": []
+  },
+  "appearance": {
+    "age": "22",
+    "eyes": "Ambrés",
+    "height": "182",
+    "hair": "Bruns très sombres, drus et rêches",
+    "skin": "Teinte et texture de pierre polie",
+    "weight": "352"
+  },
+  "backstory": "Née à la suite d'un puissant séisme au cours duquel sa mère avait supplié la terre d'épargner son bébé, cette jeune fille voit son corps se transformer à l'adolescence, développant des traits de pierre et des pouvoirs élémentaires qui terrifient ses parents. Rejetée par sa famille qui y voit une malédiction, elle est confiée à Frère Caelen, un druide ermite qui révèle sa vraie nature de Génasi de terre et l'initie aux secrets du Cercle de la Terre. Après des années d'apprentissage auprès de ce mentor qui lui apprend à canaliser sa magie et à devenir le bouclier du monde, elle achève sa formation et prend la route, déterminée à protéger la nature et à mettre sa force inébranlable au service de ses compagnons.",
+  "allies": null
+}

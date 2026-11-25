@@ -1,0 +1,177 @@
+{
+  "pages": [
+    {
+      "title": "Personnage",
+      "blocks": [
+        { "block": "identity", "inspiration": true, "fields": [
+          { "label": "Classe", "path": "classes", "template": "{name}", "join": " / " },
+          { "label": "Niveau", "path": "classes", "template": "{level}", "join": " / ", "id": "lvl" },
+          { "label": "Sous-classe", "path": "classes", "template": "{subclass}", "join": " / " },
+          { "label": "Espèce", "path": "race" }
+        ] },
+        { "block": "container", "className": "main", "blocks": [
+          { "block": "abilitySheet",
+            "keyLabels": {
+              "STR": "Force", "DEX": "Dextérité", "CON": "Constitution",
+              "INT": "Intelligence", "WIS": "Sagesse", "CHA": "Charisme"
+            },
+            "skillLabels": {
+              "Acrobatics": "Acrobaties", "Animal Handling": "Dressage", "Arcana": "Arcanes",
+              "Athletics": "Athlétisme", "Deception": "Tromperie", "History": "Histoire",
+              "Insight": "Intuition", "Intimidation": "Intimidation", "Investigation": "Investigation",
+              "Medicine": "Médecine", "Nature": "Nature", "Perception": "Perception",
+              "Performance": "Représentation", "Persuasion": "Persuasion", "Religion": "Religion",
+              "Sleight of Hand": "Escamotage", "Stealth": "Discrétion", "Survival": "Survie"
+            } },
+          { "block": "container", "className": "col", "blocks": [
+            { "block": "fillBox", "className": "core", "grid": 3, "cellBox": true, "controls": [
+              { "label": "Classe d'armure", "path": "armorClass" },
+              { "label": "Initiative", "path": "initiative", "id": "init", "signed": true },
+              { "label": "Vitesse", "path": "speed", "className": "sm" },
+              { "label": "Bonus de maîtrise", "path": "proficiencyBonus", "id": "pb", "control": "output", "signed": true },
+              { "label": "Perception passive", "path": "passivePerception", "id": "pp", "control": "output" },
+              { "label": "Taille", "path": "size", "className": "sm" }
+            ] },
+            { "block": "fillBox", "title": "Points de vie", "grid": 3, "controls": [
+              { "label": "Maximum", "path": "hp.max" },
+              { "label": "Actuels" },
+              { "label": "Temporaires", "path": "hp.temp" }
+            ] },
+            { "block": "container", "className": "g2", "blocks": [
+              { "block": "fillBox", "title": "Dés de vie", "grid": 2, "controls": [
+                { "label": "Total (ex. 2d8)", "path": "hitDice" },
+                { "label": "Dépensés" }
+              ] },
+              { "block": "fillBox", "title": "Jets contre la mort", "className": "death", "controls": [
+                { "label": "Échecs", "control": "circles", "circleCount": 3 },
+                { "label": "Réussites", "control": "circles", "circleCount": 3 }
+              ] }
+            ] },
+            { "block": "container", "className": "g2", "blocks": [
+              { "block": "fillBox", "title": "États préjudiciables", "controls": [
+                { "control": "textarea", "rows": 3 }
+              ] },
+              { "block": "fillBox", "title": "Épuisement", "className": "exhaust", "controls": [
+                { "control": "circles", "circleCount": 6, "circleLabels": ["1", "2", "3", "4", "5", "6"],
+                  "note": "−2 par niveau aux tests d20 et DD de sorts · VD −1,5 m par niveau · 6 = mort" }
+              ] }
+            ] },
+            { "block": "fillBox", "title": "Résistances & immunités", "className": "tight", "controls": [
+              { "control": "textarea", "rows": 3, "path": "defenses", "join": "\n" }
+            ] },
+            { "block": "container", "className": "g2", "blocks": [
+              { "block": "fillBox", "title": "Maîtrises d'armes", "className": "tight", "controls": [
+                { "control": "textarea", "className": "autogrow", "path": "proficiencies.weapons", "join": "\n" }
+              ] },
+              { "block": "fillBox", "title": "Maîtrises d'armures", "className": "tight", "controls": [
+                { "control": "textarea", "className": "autogrow", "path": "proficiencies.armor", "join": "\n" }
+              ] }
+            ] },
+            { "block": "fillBox", "title": "Maîtrises des outils", "className": "tight", "controls": [
+              { "control": "textarea", "className": "autogrow", "path": "proficiencies.tools", "join": "\n" }
+            ] },
+            { "block": "fillBox", "title": "Langues", "className": "tight", "controls": [
+              { "control": "textarea", "className": "autogrow", "path": "proficiencies.languages", "join": "\n" }
+            ] },
+            { "block": "fillBox", "title": "Capacités et traits", "className": "tight grow", "controls": [
+              { "control": "textarea", "className": "autogrow", "path": "features", "template": "{name}", "join": "\n" }
+            ] }
+          ] }
+        ] }
+      ]
+    },
+    {
+      "title": "Actions & sorts",
+      "blocks": [
+        { "block": "fillTable", "title": "Attaques", "className": "attacks", "path": "attacks", "extra": 6, "columns": [
+          { "title": "Nom", "path": "name", "width": "34%" },
+          { "title": "Bonus", "path": "bonus", "width": "14%" },
+          { "title": "Dégâts & type", "path": "damage", "width": "26%" },
+          { "title": "Portée, propriétés", "path": "properties" }
+        ] },
+        { "block": "fillBox", "title": "Actions, actions bonus & réactions (dons, traits d'espèce, capacités de classe)", "className": "actions", "grid": 3, "controls": [
+          { "label": "Actions", "control": "textarea", "rows": 6 },
+          { "label": "Actions bonus", "control": "textarea", "rows": 6 },
+          { "label": "Réactions & autres", "control": "textarea", "rows": 6 }
+        ] },
+        { "block": "container", "className": "companion", "blocks": [
+          { "block": "fillBox", "title": "Lancement de sorts", "className": "spellcast", "grid": 3, "controls": [
+            { "label": "Caractéristique d'incantation", "control": "select", "id": "sca", "path": "spellcasting.0.ability",
+              "options": [
+                { "value": "", "label": "—" },
+                { "value": "INT", "label": "Intelligence" },
+                { "value": "WIS", "label": "Sagesse" },
+                { "value": "CHA", "label": "Charisme" }
+              ] },
+            { "label": "DD de sauvegarde", "control": "output", "id": "dd", "path": "spellcasting.0.saveDc" },
+            { "label": "Bonus d'attaque", "control": "output", "id": "ba", "path": "spellcasting.0.attack", "signed": true }
+          ] },
+          { "block": "spellSlots", "title": "Emplacements de sort (modifiez le nombre, cochez ceux utilisés)", "defaults": [4, 3, 3, 3, 3, 2, 2, 1, 1] }
+        ] },
+        { "block": "spellTables", "path": "spells", "cantripLabel": "Tours de magie", "emptyRows": 4, "levelLabels": {
+          "1": "Niveau 1", "2": "Niveau 2", "3": "Niveau 3", "4": "Niveau 4", "5": "Niveau 5",
+          "6": "Niveau 6", "7": "Niveau 7", "8": "Niveau 8", "9": "Niveau 9"
+        } }
+      ]
+    },
+    {
+      "title": "Inventaire",
+      "blocks": [
+        { "block": "container", "className": "inv-head", "blocks": [
+          { "block": "heading", "title": "Inventaire" },
+          { "block": "fillBox", "className": "weights nobox", "grid": 3, "controls": [
+            { "label": "Poids porté", "unitPath": "meta.units.weight", "control": "output", "id": "wt", "preset": "0" },
+            { "label": "Charge maximale", "unitPath": "meta.units.weight", "path": "carryingCapacity", "type": "number" },
+            { "label": "Pousser, traîner, soulever", "unitPath": "meta.units.weight", "path": "pushDragLift", "type": "number" }
+          ] }
+        ] },
+        { "block": "fillTable", "className": "inventory", "path": "equipment", "extra": 36, "columns": [
+          { "title": "Objet", "path": "name" },
+          { "title": "Qté", "path": "quantity", "width": "16mm", "type": "number", "inputClass": "q" },
+          { "title": "Poids unitaire", "path": "weight", "unitPath": "meta.units.weight", "width": "26mm", "type": "number", "inputClass": "u" },
+          { "title": "Poids total", "width": "22mm", "control": "output", "inputClass": "tw" },
+          { "title": "Notes", "width": "60mm" }
+        ] },
+        { "block": "fillBox", "className": "coins nobox", "grid": 5, "cellBox": true, "controls": [
+          { "label": "PP · Platine", "path": "coins.pp" },
+          { "label": "PO · Or", "path": "coins.gp" },
+          { "label": "PE · Électrum", "path": "coins.ep" },
+          { "label": "PA · Argent", "path": "coins.sp" },
+          { "label": "PC · Cuivre", "path": "coins.cp" }
+        ] }
+      ]
+    },
+    {
+      "title": "Personnage & histoire",
+      "blocks": [
+        { "block": "heading", "title": "Personnage & histoire" },
+        { "block": "fillBox", "title": "Description physique", "grid": 3, "controls": [
+          { "label": "Âge", "path": "appearance.age" },
+          { "label": "Taille", "path": "appearance.height" },
+          { "label": "Poids", "path": "appearance.weight" },
+          { "label": "Alignement", "path": "alignment" },
+          { "label": "Yeux", "path": "appearance.eyes" },
+          { "label": "Peau", "path": "appearance.skin" },
+          { "label": "Cheveux", "path": "appearance.hair" },
+          { "label": "Signes distinctifs" }
+        ] },
+        { "block": "fillBox", "title": "Apparence, tenue, voix, attitude", "className": "appearance", "controls": [
+          { "control": "textarea", "className": "autogrow", "path": "personality.appearance", "join": "\n" }
+        ] },
+        { "block": "container", "className": "g2", "blocks": [
+          { "block": "fillBox", "title": "Traits de personnalité", "controls": [ { "control": "textarea", "rows": 4, "className": "autogrow", "path": "personality.traits", "join": "\n" } ] },
+          { "block": "fillBox", "title": "Idéal", "controls": [ { "control": "textarea", "rows": 4, "className": "autogrow", "path": "personality.ideals", "join": "\n" } ] },
+          { "block": "fillBox", "title": "Liens & obligations", "controls": [ { "control": "textarea", "rows": 4, "className": "autogrow", "path": "personality.bonds", "join": "\n" } ] },
+          { "block": "fillBox", "title": "Défauts", "controls": [ { "control": "textarea", "rows": 4, "className": "autogrow", "path": "personality.flaws", "join": "\n" } ] }
+        ] },
+        { "block": "fillBox", "title": "Histoire du personnage", "className": "story", "controls": [
+          { "control": "textarea", "path": "backstory" }
+        ] },
+        { "block": "container", "className": "g2", "blocks": [
+          { "block": "fillBox", "title": "Alliés, organisations, contacts", "controls": [ { "control": "textarea", "rows": 7, "className": "autogrow", "path": "allies" } ] },
+          { "block": "fillBox", "title": "Objectifs, secrets, notes de rôle", "controls": [ { "control": "textarea", "rows": 7, "className": "autogrow" } ] }
+        ] }
+      ]
+    }
+  ]
+}

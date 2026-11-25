@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Fiche de personnage D&D</title>
+<style>
+:root{--ink:#1f1d1a;--line:#8c9091;--acc:#3d4a4f;--soft:#eef0f0}
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+body{margin:0;background:#cfd2d2;font:8.5pt/1.25 "Segoe UI",Arial,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;min-height:296mm;margin:8mm auto;padding:9mm;background:#fff}
+h1{font:700 17pt Georgia,"Palatino Linotype",serif;margin:0}
+h3{font:700 8.5pt Georgia,"Palatino Linotype",serif;margin:0 0 2px;color:var(--acc)}
+input,textarea,select,button{font:inherit;color:inherit}
+input,select{width:100%;border:0;border-bottom:1px dotted var(--line);background:transparent;padding:1px 2px;min-width:0}
+textarea{width:100%;border:0;background:transparent;resize:none;padding:1px 2px;display:block}
+input:focus,textarea:focus,select:focus{outline:2px solid #6c8f9a;outline-offset:1px}
+label{font-size:7pt;color:#555;display:block}
+.box{border:1.3px solid var(--ink);border-radius:5px;padding:3px 6px 4px;background:#fff}
+.bar{position:sticky;top:0;z-index:5;background:var(--ink);color:#fff;padding:6px 12px;display:flex;gap:12px;align-items:center}
+.bar button{background:#fff;border:0;padding:4px 12px;border-radius:3px;cursor:pointer}
+.bar span{font-size:9pt;opacity:.85}
+.t{cursor:pointer}
+.d{width:2.7mm;height:2.7mm;border:1px solid var(--ink);border-radius:50%;display:inline-block;flex:none}
+.cb{width:3.3mm;height:3.3mm;border:1px solid var(--ink);border-radius:1px;display:inline-block;flex:none}
+.d.on,.cb.on{background:var(--ink)}
+.x{visibility:hidden}
+.star{font-size:16pt;line-height:1}.star::before{content:"☆"}.star.on::before{content:"★"}
+/* page 1 */
+.head{display:grid;grid-template-columns:1fr 18mm;gap:6mm;align-items:end;margin-bottom:4px}
+.head h1 input{font:700 18pt Georgia,serif;border-bottom:1.5px solid var(--ink)}
+.id{display:grid;grid-template-columns:repeat(4,1fr);gap:2px 8px;margin-bottom:6px}
+.main{display:grid;grid-template-columns:64mm 1fr;gap:5mm}
+.ab{border:1.3px solid var(--ink);border-radius:5px;padding:3px 5px 4px;margin-bottom:4px;display:grid;grid-template-columns:1fr auto;column-gap:5px}
+.ab h3{grid-column:1/-1;border-bottom:1px solid var(--line);font-size:9.5pt}
+.cir{width:19mm;height:19mm;border:1.3px solid var(--ink);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;align-self:center;margin-top:2px}
+.mod{font:700 15pt Georgia,serif;line-height:1}
+.cir .sc{width:9mm;text-align:center;border:1px solid var(--line);border-radius:8px;font-size:8pt;padding:0;margin-top:1px;-moz-appearance:textfield}
+.r{display:flex;align-items:center;gap:2px;height:4.7mm}
+.r .l{flex:1;white-space:nowrap}
+.r output{font-weight:600;min-width:7mm;text-align:right}
+.rc{display:flex;flex-direction:column;gap:4px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.st{text-align:center}
+.st input,.st output{font:700 15pt Georgia,serif;text-align:center;display:block;border:0;height:8mm;line-height:8mm}
+.st input.sm{font:600 9pt "Segoe UI",Arial;height:8mm}
+.col{display:flex;flex-direction:column}
+.grow{flex:1}.grow textarea{height:100%;min-height:14mm}
+.row{display:flex;gap:4px;align-items:center;justify-content:center;margin:2px 0}
+.row small{font-size:7pt;color:#555}
+.ex{display:flex;justify-content:space-between;align-items:center}
+.ex span.n{font-size:7pt;text-align:center;display:block}
+/* tables */
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{font-size:7pt;font-weight:600;text-align:left;color:#555;border-bottom:1.3px solid var(--ink);padding:1px 2px}
+td{border-bottom:1px solid #c5c8c8;height:6mm;padding:0 1px}
+td input{border:0;height:5.6mm}
+td.p{text-align:center;width:10mm}
+.add{background:var(--soft);border:1px dashed var(--line);border-radius:3px;font-size:7.5pt;padding:1px 8px;margin-top:2px;cursor:pointer}
+/* page 2 */
+.sl{display:flex;align-items:center;gap:4px;height:5.6mm}
+.sl b{width:11mm;font-weight:600}
+.sl input{width:8mm;text-align:center;border:1px solid var(--line);border-radius:3px;padding:0;-moz-appearance:textfield}
+.sl .bx{display:flex;gap:2px;flex-wrap:wrap}
+.lvl{break-inside:avoid;margin-bottom:5px}
+.lvl h3{border-bottom:0}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.acts textarea{height:36mm;border:1px solid #c5c8c8;border-radius:3px}
+.sc2{display:grid;grid-template-columns:36mm repeat(2,22mm) 1fr;gap:6px;align-items:end}
+/* page 4 */
+.bg textarea{border:1px solid #c5c8c8;border-radius:3px}
+input[type=number]::-webkit-inner-spin-button{display:none}
+@media print{
+ body{background:none}.page{margin:0;box-shadow:none;break-after:page}.page:last-child{break-after:auto}
+ .no-print{display:none!important}
+ input,textarea,select{border-color:#bbb}
+ input::placeholder{color:transparent}
+}
+</style>
+</head>
+<body>
+<div class="bar no-print"><button onclick="print()">Imprimer</button><span>Remplissez à l’écran, puis imprimez en A4, marges « aucune », graphiques d’arrière-plan activés. Cliquez sur les cercles et cases pour les cocher.</span></div>
+
+<!-- PAGE 1 -->
+<div class="page">
+ <div class="head">
+  <h1><input placeholder="Nom du personnage" aria-label="Nom"></h1>
+  <div class="st" style="text-align:center"><label>Inspiration</label><span class="t star" tabindex="0"></span></div>
+ </div>
+ <div class="id">
+  <div><label>Classe</label><input></div><div><label>Sous-classe</label><input></div>
+  <div><label>Espèce</label><input></div><div><label>Historique</label><input></div>
+  <div><label>Niveau</label><input id="lvl" type="number" min="1" max="20" value="1"></div>
+  <div><label>Points d’expérience</label><input></div>
+  <div><label>Genre / pronoms</label><input></div><div><label>Joueur</label><input></div>
+ </div>
+ <div class="main">
+  <div id="abs"></div>
+  <div class="col" style="gap:4px">
+   <div class="g3">
+    <div class="box st"><label>Classe d’armure</label><input></div>
+    <div class="box st"><label>Initiative</label><input id="init"></div>
+    <div class="box st"><label>Vitesse</label><input class="sm" placeholder="9 m"></div>
+    <div class="box st"><label>Bonus de maîtrise</label><output id="pb">+2</output></div>
+    <div class="box st"><label>Perception passive</label><output id="pp">10</output></div>
+    <div class="box st"><label>Sens & taille</label><input class="sm"></div>
+   </div>
+   <div class="box">
+    <h3>Points de vie</h3>
+    <div class="g3 st"><div><label>Maximum</label><input></div><div><label>Actuels</label><input></div><div><label>Temporaires</label><input></div></div>
+   </div>
+   <div class="g2">
+    <div class="box"><h3>Dés de vie</h3><div class="g2"><div><label>Total (ex. 2d8)</label><input></div><div><label>Dépensés</label><input></div></div></div>
+    <div class="box"><h3>Jets contre la mort</h3>
+     <div class="row"><small>Réussites</small><i class="t d"></i><i class="t d"></i><i class="t d"></i></div>
+     <div class="row"><small>Échecs</small><i class="t d"></i><i class="t d"></i><i class="t d"></i></div></div>
+   </div>
+   <div class="g2">
+    <div class="box"><h3>États préjudiciables</h3><textarea rows="3"></textarea></div>
+    <div class="box"><h3>Épuisement</h3>
+     <div class="ex"><span><i class="t d"></i><span class="n">1</span></span><span><i class="t d"></i><span class="n">2</span></span><span><i class="t d"></i><span class="n">3</span></span><span><i class="t d"></i><span class="n">4</span></span><span><i class="t d"></i><span class="n">5</span></span><span><i class="t d"></i><span class="n">6</span></span></div>
+     <label style="font-size:6.3pt">−2 par niveau aux tests d20 et DD de sorts · VD −1,5 m par niveau · 6 = mort</label></div>
+   </div>
+   <div class="box"><h3>Résistances & immunités</h3><textarea rows="3"></textarea></div>
+   <div class="g2">
+    <div class="box"><h3>Armes</h3><textarea rows="2"></textarea></div>
+    <div class="box"><h3>Armures</h3><textarea rows="2"></textarea></div>
+   </div>
+   <div class="box"><h3>Outils</h3><textarea rows="2"></textarea></div>
+   <div class="box col grow"><h3>Langues</h3><textarea></textarea></div>
+  </div>
+ </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+ <div class="box">
+  <h3>Attaques</h3>
+  <table><thead><tr><th style="width:34%">Nom</th><th style="width:14%">Bonus</th><th style="width:26%">Dégâts & type</th><th>Portée, propriétés</th></tr></thead>
+  <tbody id="atk"></tbody></table>
+  <button class="add no-print">+ ligne</button>
+ </div>
+ <div class="box" style="margin-top:5px">
+  <h3>Actions, actions bonus & réactions (dons, traits d’espèce, capacités de classe)</h3>
+  <div class="acts"><div><label>Actions</label><textarea></textarea></div><div><label>Actions bonus</label><textarea></textarea></div><div><label>Réactions & autres</label><textarea></textarea></div></div>
+ </div>
+ <div class="box" style="margin-top:5px">
+  <h3>Lancement de sorts</h3>
+  <div class="sc2">
+   <div><label>Caractéristique d’incantation</label><select id="sca"><option value="">—</option><option value="3">Intelligence</option><option value="4">Sagesse</option><option value="5">Charisme</option></select></div>
+   <div class="st"><label>DD de sauvegarde</label><output id="dd">—</output></div>
+   <div class="st"><label>Bonus d’attaque</label><output id="ba">—</output></div>
+   <div><label>Sorts préparés / focaliseur</label><input></div>
+  </div>
+  <h3 style="margin-top:4px">Emplacements de sort (modifiez le nombre, cochez ceux utilisés)</h3>
+  <div id="slots" style="display:grid;grid-template-columns:repeat(3,1fr);column-gap:8px"></div>
+ </div>
+ <div id="spells" style="margin-top:6px"></div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+ <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:5px"><h1>Inventaire</h1>
+  <div style="display:flex;gap:8px;width:90mm"><div><label>Poids porté (kg)</label><output id="wt" style="font:700 12pt Georgia,serif">0</output></div><div><label>Charge maximale (kg)</label><input type="number" step="0.1"></div></div></div>
+ <div class="box">
+  <table><thead><tr><th>Objet</th><th style="width:16mm">Qté</th><th style="width:26mm">Poids unitaire (kg)</th><th style="width:22mm">Poids total</th><th style="width:60mm">Notes</th></tr></thead>
+  <tbody id="inv"></tbody></table>
+  <button class="add no-print">+ ligne</button>
+ </div>
+ <div class="g3" style="margin-top:6px;grid-template-columns:repeat(5,1fr)" id="coins"></div>
+ <div class="box" style="margin-top:6px"><h3>Bourse, trésors, troc</h3><textarea rows="6"></textarea></div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page bg col" style="gap:5px">
+ <h1>Personnage & histoire</h1>
+ <div class="box">
+  <h3>Description physique</h3>
+  <div class="id" style="grid-template-columns:repeat(4,1fr);margin:0">
+   <div><label>Âge</label><input></div><div><label>Taille</label><input></div><div><label>Poids</label><input></div><div><label>Alignement</label><input></div>
+   <div><label>Yeux</label><input></div><div><label>Peau</label><input></div><div><label>Cheveux</label><input></div><div><label>Signes distinctifs</label><input></div>
+  </div>
+  <label style="margin-top:3px">Apparence, tenue, voix, attitude</label><textarea rows="4" style="border:1px solid #c5c8c8;border-radius:3px"></textarea>
+ </div>
+ <div class="g2">
+  <div class="box"><h3>Traits de personnalité</h3><textarea rows="4"></textarea></div>
+  <div class="box"><h3>Idéal</h3><textarea rows="4"></textarea></div>
+  <div class="box"><h3>Liens & obligations</h3><textarea rows="4"></textarea></div>
+  <div class="box"><h3>Défauts</h3><textarea rows="4"></textarea></div>
+ </div>
+ <div class="box col grow" style="min-height:70mm"><h3>Histoire du personnage</h3><textarea style="flex:1;height:100%"></textarea></div>
+ <div class="g2">
+  <div class="box"><h3>Alliés, organisations, contacts</h3><textarea rows="7"></textarea></div>
+  <div class="box"><h3>Objectifs, secrets, notes de rôle</h3><textarea rows="7"></textarea></div>
+ </div>
+</div>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const sg=n=>(n>=0?'+':'−')+Math.abs(n);
+const AB=[["Force",["Athlétisme"]],["Dextérité",["Acrobaties","Escamotage","Discrétion"]],["Constitution",[]],["Intelligence",["Arcanes","Histoire","Investigation","Nature","Religion"]],["Sagesse",["Dressage","Intuition","Médecine","Perception","Survie"]],["Charisme",["Intimidation","Persuasion","Représentation","Tromperie"]]];
+const row=(l,s)=>`<div class="r" data-k="${l}"><i class="t d"></i>${s?'<i class="t d x"></i>':'<i class="t d"></i>'}<span class="l">${l}</span><output>+0</output></div>`;
+$('#abs').innerHTML=AB.map(([n,s])=>`<section class="ab"><h3>${n}</h3><div>${row('Jet de sauvegarde',1)}${s.map(x=>row(x,0)).join('')}</div><div class="cir"><b class="mod">+0</b><input class="sc" type="number" value="10" aria-label="Valeur de ${n}"></div></section>`).join('');
+// le point de maîtrise est le 1er rond ; le 2e (skills) = expertise. Pour les jets de sauvegarde, le 2e rond est masqué.
+const tr=(n,h)=>`<tr>${h}</tr>`.repeat(n);
+$('#atk').innerHTML=tr(6,'<td><input></td><td><input></td><td><input></td><td><input></td>');
+$('#inv').innerHTML=tr(30,'<td><input></td><td><input class="q" type="number" min="0"></td><td><input class="u" type="number" step="0.01" min="0"></td><td><output class="tw"></output></td><td><input></td>');
+$('#coins').innerHTML=[["PP","Platine"],["PO","Or"],["PE","Électrum"],["PA","Argent"],["PC","Cuivre"]].map(([a,b])=>`<div class="box st"><label>${a} · ${b}</label><input></div>`).join('');
+const MAX=[4,3,3,3,3,2,2,1,1];
+const boxes=(n,c)=>{const t=$$('.sl')[n].querySelector('.bx');t.innerHTML='<i class="t cb"></i>'.repeat(Math.max(0,Math.min(9,c)))};
+$('#slots').innerHTML=MAX.map((m,i)=>`<div class="sl"><b>Niv. ${i+1}</b><input type="number" min="0" max="9" value="${m}" data-n="${i}"><span class="bx"></span></div>`).join('');
+MAX.forEach((m,i)=>boxes(i,m));
+const srow=n=>`<tr><td class="p">${n?'<i class="t cb"></i>':''}</td>${'<td><input></td>'.repeat(5)}</tr>`;
+$('#spells').innerHTML=Array.from({length:10},(_,n)=>`<section class="lvl"><h3>${n?'Niveau '+n:'Tours de magie'}</h3><table><thead><tr><th class="p" style="width:10mm">${n?'Prép.':''}</th><th style="width:36%">Sort</th><th style="width:13%">Incantation</th><th style="width:13%">Portée</th><th style="width:15%">Durée</th><th>Notes</th></tr></thead><tbody>${srow(n).repeat(n>5?2:4)}</tbody></table><button class="add no-print">+ ligne</button></section>`).join('');
+
+function calc(){
+ const pb=2+Math.floor((Math.min(20,Math.max(1,+$('#lvl').value||1))-1)/4);
+ $('#pb').textContent=sg(pb);const m=[];let perc=0;
+ $$('.ab').forEach((a,i)=>{
+  m[i]=Math.floor(((+$('.sc',a).value||10)-10)/2);$('.mod',a).textContent=sg(m[i]);
+  $$('.r',a).forEach(r=>{const v=m[i]+pb*$$('.d.on',r).length;$('output',r).textContent=sg(v);if(r.dataset.k==='Perception')perc=v});
+ });
+ $('#pp').textContent=10+perc;
+ const ini=$('#init');if(!ini.dataset.m)ini.value=sg(m[1]);
+ const c=$('#sca').value;
+ $('#dd').textContent=c?8+pb+m[c]:'—';$('#ba').textContent=c?sg(pb+m[c]):'—';
+ let w=0;$$('#inv tr').forEach(r=>{const u=parseFloat($('.u',r).value),q=parseFloat($('.q',r).value);
+  const o=$('.tw',r);if(isNaN(u)){o.textContent='';return}const t=u*(isNaN(q)?1:q);w+=t;o.textContent=+t.toFixed(2)});
+ $('#wt').textContent=+w.toFixed(2);
+}
+document.addEventListener('click',e=>{
+ const t=e.target.closest('.t');if(t){t.classList.toggle('on');calc()}
+ const b=e.target.closest('.add');if(b){const tb=b.parentElement.querySelector('tbody'),n=tb.lastElementChild.cloneNode(true);
+  $$('input',n).forEach(i=>i.value='');$$('.on',n).forEach(x=>x.classList.remove('on'));$$('output',n).forEach(o=>o.textContent='');tb.append(n)}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.classList.contains('star'))e.target.click()});
+document.addEventListener('input',e=>{
+ if(e.target.id==='init')e.target.dataset.m=1;
+ if(e.target.closest('.sl'))boxes(+e.target.dataset.n,+e.target.value||0);
+ calc();
+});
+calc();
+</script>
+</body>
+</html>
