@@ -2,7 +2,7 @@
   "meta": {
     "source": "dom",
     "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/nikanor.json",
-    "extractedAt": "2026-11-25T12:57:20.765Z",
+    "extractedAt": "2026-11-25T15:18:42.981Z",
     "characterId": null,
     "units": {
       "distance": "ft.",
@@ -290,21 +290,6 @@
       "name": "Weapon Mastery",
       "section": "FEATS",
       "description": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency. Whenever you finish a Long Rest, you can change the kinds of weapons you chose."
-    },
-    {
-      "name": "Dark Bargain",
-      "section": "FEATS",
-      "description": "At your GM's discretion, you can take a Dark Bargain."
-    },
-    {
-      "name": "Character Threads",
-      "section": "FEATS",
-      "description": "Threads are aspects added to characters at any time during their career that have a specific short or long-term goal."
-    },
-    {
-      "name": "Runestones",
-      "section": "FEATS",
-      "description": "At the beginning of the Northlands Sagas adventure path, each player should draw one Runestone randomly."
     }
   ],
   "equipment": [

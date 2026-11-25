@@ -2,7 +2,7 @@
   "meta": {
     "source": "dom",
     "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/esther.json",
-    "extractedAt": "2026-11-25T12:57:19.015Z",
+    "extractedAt": "2026-11-25T15:18:41.244Z",
     "characterId": null,
     "units": {
       "distance": "ft.",
@@ -276,23 +276,7 @@
       "Elvish"
     ]
   },
-  "features": [
-    {
-      "name": "Dark Bargain",
-      "section": "FEATS",
-      "description": "At your GM's discretion, you can take a Dark Bargain."
-    },
-    {
-      "name": "Character Threads",
-      "section": "FEATS",
-      "description": "Threads are aspects added to characters at any time during their career that have a specific short or long-term goal."
-    },
-    {
-      "name": "Runestones",
-      "section": "FEATS",
-      "description": "At the beginning of the Northlands Sagas adventure path, each player should draw one Runestone randomly."
-    }
-  ],
+  "features": [],
   "equipment": [
     {
       "name": "Backpack",
