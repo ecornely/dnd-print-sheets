@@ -1,0 +1,513 @@
+{
+  "meta": {
+    "source": "dom",
+    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/oros.json",
+    "extractedAt": "2026-11-25T15:20:21.233Z",
+    "characterId": null,
+    "units": {
+      "distance": "m",
+      "weight": "kg"
+    }
+  },
+  "name": "Oros Telluros",
+  "level": 2,
+  "xp": 0,
+  "race": "Génasi de la terre",
+  "size": "M",
+  "background": "Oros",
+  "alignment": "Neutre",
+  "classes": [
+    {
+      "name": "Druide",
+      "level": 2,
+      "subclass": null
+    }
+  ],
+  "spellcasting": [
+    {
+      "className": "Druide",
+      "ability": "WIS",
+      "modifier": 3,
+      "attack": 5,
+      "saveDc": 13
+    }
+  ],
+  "abilities": {
+    "STR": {
+      "score": 13,
+      "modifier": 1
+    },
+    "DEX": {
+      "score": 12,
+      "modifier": 1
+    },
+    "CON": {
+      "score": 16,
+      "modifier": 3
+    },
+    "INT": {
+      "score": 10,
+      "modifier": 0
+    },
+    "WIS": {
+      "score": 16,
+      "modifier": 3
+    },
+    "CHA": {
+      "score": 8,
+      "modifier": -1
+    }
+  },
+  "savingThrows": {
+    "STR": {
+      "value": 1,
+      "proficient": false
+    },
+    "DEX": {
+      "value": 1,
+      "proficient": false
+    },
+    "CON": {
+      "value": 3,
+      "proficient": false
+    },
+    "INT": {
+      "value": 2,
+      "proficient": true
+    },
+    "WIS": {
+      "value": 5,
+      "proficient": true
+    },
+    "CHA": {
+      "value": -1,
+      "proficient": false
+    }
+  },
+  "skills": [
+    {
+      "name": "Acrobatics",
+      "ability": "DEX",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Animal Handling",
+      "ability": "WIS",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Arcana",
+      "ability": "INT",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Athletics",
+      "ability": "STR",
+      "value": 3,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Deception",
+      "ability": "CHA",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "History",
+      "ability": "INT",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Insight",
+      "ability": "WIS",
+      "value": 5,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Intimidation",
+      "ability": "CHA",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Investigation",
+      "ability": "INT",
+      "value": 2,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Medicine",
+      "ability": "WIS",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Nature",
+      "ability": "INT",
+      "value": 5,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Perception",
+      "ability": "WIS",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Performance",
+      "ability": "CHA",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Persuasion",
+      "ability": "CHA",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Religion",
+      "ability": "INT",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Sleight of Hand",
+      "ability": "DEX",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Stealth",
+      "ability": "DEX",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Survival",
+      "ability": "WIS",
+      "value": 5,
+      "proficiency": "proficient"
+    }
+  ],
+  "proficiencyBonus": 2,
+  "armorClass": 13,
+  "initiative": 1,
+  "speed": "9 m. (6 cases)",
+  "passivePerception": 13,
+  "carryingCapacity": 88.5,
+  "pushDragLift": 176.9,
+  "hp": {
+    "current": 19,
+    "max": 19,
+    "temp": null
+  },
+  "hitDice": "2d8",
+  "deathSaves": {
+    "successes": null,
+    "failures": null
+  },
+  "coins": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 25,
+    "pp": 0
+  },
+  "attacks": [
+    {
+      "name": "Gourdin",
+      "bonus": "+3",
+      "damage": "1d4+1 Contondant",
+      "properties": "1.5 m. (1 case), Léger, Lent"
+    },
+    {
+      "name": "Fronde",
+      "bonus": "+3",
+      "damage": "1d4+1 Contondant",
+      "properties": "30/36 m. (24 cases), Munitions, Portée, Lent"
+    }
+  ],
+  "actions": {
+    "action": [],
+    "bonusAction": [
+      "Mot de guérison",
+      "Crosse des druides",
+      "Combat à deux armes",
+      "Forme sauvage"
+    ],
+    "reaction": [
+      "Absorption des éléments"
+    ],
+    "other": [
+      "Laisser un message druidique"
+    ]
+  },
+  "defenses": {
+    "resistances": [],
+    "immunities": [],
+    "vulnerabilities": []
+  },
+  "proficiencies": {
+    "armor": [
+      "Armure légère",
+      "Boucliers"
+    ],
+    "weapons": [
+      "Armes simples"
+    ],
+    "tools": [
+      "Fléchettes",
+      "Kit d'herboristerie",
+      "Outils de tanneur"
+    ],
+    "languages": [
+      "Commun",
+      "Druidique",
+      "Primordial"
+    ]
+  },
+  "features": [
+    {
+      "name": "Initié à la magie (Druide)",
+      "section": "FEATS",
+      "description": "Vous obtenez les avantages suivants. Deux sorts de tour. Vous apprenez deux sorts de votre choix parmi la liste des sorts du druide. L'intelligence, la sagesse ou la charisme est votre capacité de sorts pour les sorts de ce don (choisissez lorsqu'on vous attribue ce don). Sort de niveau 1. Choisissez un sort de niveau 1 de la même liste que celle que vous avez choisie pour les sorts de tour de ce don. Vous avez toujours ce sort préparé. Vous pouvez le lancer une fois sans emplacement de sort, et vous récupérez la possibilité de le lancer de cette manière lorsque vous terminez un repos long. Vous pouvez également le lancer en utilisant n'importe quel emplacements de sort que vous avez. Changement de sort. Chaque fois que vous gagnez un nouveau niveau, vous pouvez remplacer l'un des sorts que vous avez choisis pour ce don avec un autre sort du même niveau de la même liste de sorts. Répétable. Vous pouvez prendre ce don plusieurs fois, mais vous devez choisir une liste de sorts différente à chaque fois."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Sac à dos",
+      "quantity": 1,
+      "weight": 2.3
+    },
+    {
+      "name": "Écorce",
+      "quantity": 1,
+      "weight": 4.5
+    },
+    {
+      "name": "Sac de couchage",
+      "quantity": 1,
+      "weight": 3.2
+    },
+    {
+      "name": "Gourdin",
+      "quantity": 1,
+      "weight": 0.9
+    },
+    {
+      "name": "Kit d'herboristerie",
+      "quantity": 1,
+      "weight": 1.4
+    },
+    {
+      "name": "Huile",
+      "quantity": 2,
+      "weight": 0.5
+    },
+    {
+      "name": "Rations",
+      "quantity": 5,
+      "weight": 0.9
+    },
+    {
+      "name": "Corde",
+      "quantity": 1,
+      "weight": 2.3
+    },
+    {
+      "name": "Fronde",
+      "quantity": 1,
+      "weight": 0
+    },
+    {
+      "name": "Boîte d'allumettes",
+      "quantity": 1,
+      "weight": 0.5
+    },
+    {
+      "name": "Chandelle",
+      "quantity": 10,
+      "weight": 0.5
+    },
+    {
+      "name": "Outre d'eau",
+      "quantity": 1,
+      "weight": 2.3
+    }
+  ],
+  "spells": [
+    {
+      "name": "Assistance",
+      "level": 0,
+      "school": "Divination",
+      "castingTime": "1 Action",
+      "range": "Toucher",
+      "duration": "Concentration 1_minute",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Coup de tonnerre",
+      "level": 0,
+      "school": "Évocation",
+      "castingTime": "1 Action",
+      "range": "Soi",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": false
+    },
+    {
+      "name": "Enchevêtrement",
+      "level": 1,
+      "school": "Conjuration",
+      "castingTime": "1 Action",
+      "range": "27 m. (18 cases)",
+      "duration": "Concentration 1_minute",
+      "damaging": false,
+      "prepared": true
+    },
+    {
+      "name": "Secousse sismique",
+      "level": 1,
+      "school": "Évocation",
+      "castingTime": "1 Action",
+      "range": "6 m. (4 cases)",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": true
+    },
+    {
+      "name": "Mot de guérison",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "Réaction",
+      "range": "18 m. (12 cases)",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": true
+    },
+    {
+      "name": "Vague tonnante",
+      "level": 1,
+      "school": "Évocation",
+      "castingTime": "1 Action",
+      "range": "Soi",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": true
+    },
+    {
+      "name": "Absorption des éléments",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "1 Tour",
+      "range": "Soi",
+      "duration": "1 Tour",
+      "damaging": true,
+      "prepared": true
+    },
+    {
+      "name": "Passage sans trace",
+      "level": 2,
+      "school": "Abjuration",
+      "castingTime": "1 Action",
+      "range": "Soi",
+      "duration": "Conc. 1 Heure",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Communication avec les animaux",
+      "level": 1,
+      "school": "Divination",
+      "castingTime": "1 Action",
+      "range": "Soi",
+      "duration": "10 Minutes",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Appel de familier",
+      "level": 1,
+      "school": "Conjuration",
+      "castingTime": "1 Heure",
+      "range": "6 m. (4 cases)",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Crosse des druides",
+      "level": 0,
+      "school": "Transmutation",
+      "castingTime": "Réaction",
+      "range": "Soi",
+      "duration": "1 Minute",
+      "damaging": true,
+      "prepared": false
+    },
+    {
+      "name": "Façonnage de la terre",
+      "level": 0,
+      "school": "Transmutation",
+      "castingTime": "1 Action",
+      "range": "9 m. (6 cases)",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Message",
+      "level": 0,
+      "school": "Transmutation",
+      "castingTime": "1 Action",
+      "range": "36 m. (24 cases)",
+      "duration": "1 Tour",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Soins",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "1 Action",
+      "range": "Toucher",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    }
+  ],
+  "spellSlots": [
+    3
+  ],
+  "personality": {
+    "traits": [
+      "Je suis calme, très patient et rarement déstabilisé par le danger. J'ai pris l'habitude de toucher la terre ou la pierre environnante pour garder mon ancrage et réfléchir avant d'agir"
+    ],
+    "ideals": [
+      "Équilibre & Protection. La terre est le bouclier du monde ; mon devoir est de protéger l'ordre naturel et d'être un abri inébranlable pour ceux qui m'entourent"
+    ],
+    "bonds": [
+      "Ma géode sacrée et les enseignements de Frère Caelen sont mes plus précieux trésors. Je voyage pour accomplir mon devoir de Druide et honorer le don que la terre m'a offert"
+    ],
+    "flaws": [
+      "Mon rejet passé par mes propres parents a laissé une blessure secrète. J'ai du mal à accorder pleinement ma confiance aux gens des villes, que je trouve superficiels et changeants"
+    ],
+    "appearance": []
+  },
+  "appearance": {
+    "age": "22",
+    "eyes": "Ambrés",
+    "height": "182",
+    "hair": "Bruns très sombres, drus et rêches",
+    "skin": "Teinte et texture de pierre polie",
+    "weight": "159.7 kg"
+  },
+  "backstory": "Née à la suite d'un puissant séisme au cours duquel sa mère avait supplié la terre d'épargner son bébé, cette jeune fille voit son corps se transformer à l'adolescence, développant des traits de pierre et des pouvoirs élémentaires qui terrifient ses parents. Rejetée par sa famille qui y voit une malédiction, elle est confiée à Frère Caelen, un druide ermite qui révèle sa vraie nature de Génasi de terre et l'initie aux secrets du Cercle de la Terre. Après des années d'apprentissage auprès de ce mentor qui lui apprend à canaliser sa magie et à devenir le bouclier du monde, elle achève sa formation et prend la route, déterminée à protéger la nature et à mettre sa force inébranlable au service de ses compagnons.",
+  "allies": null
+}

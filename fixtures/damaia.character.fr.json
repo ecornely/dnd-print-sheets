@@ -2,11 +2,11 @@
   "meta": {
     "source": "dom",
     "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/damaia.json",
-    "extractedAt": "2026-11-25T12:57:15.401Z",
+    "extractedAt": "2026-11-25T15:20:14.198Z",
     "characterId": null,
     "units": {
-      "distance": "ft.",
-      "weight": "lb."
+      "distance": "m",
+      "weight": "kg"
     }
   },
   "name": "Damaia Dread",
@@ -15,7 +15,7 @@
   "race": "Tieffelin",
   "size": "M ou S",
   "background": "Arrière-plan de Damaia Dread",
-  "alignment": "Bons enchaîné",
+  "alignment": "Bonne et Chaos",
   "classes": [
     {
       "name": "Barde",
@@ -197,10 +197,10 @@
   "proficiencyBonus": 2,
   "armorClass": 13,
   "initiative": 2,
-  "speed": "9 m. (6 cellules)",
+  "speed": "9 m. (6 cases)",
   "passivePerception": 12,
-  "carryingCapacity": 135,
-  "pushDragLift": 270,
+  "carryingCapacity": 61.2,
+  "pushDragLift": 122.5,
   "hp": {
     "current": 17,
     "max": 17,
@@ -223,20 +223,20 @@
       "name": "Dague",
       "bonus": "+4",
       "damage": "1d4+2 Perforant",
-      "properties": "20/18 m. (12 cases), Finesse, Light, Jet de jeton, Nick"
+      "properties": "20/18 m. (12 cases), Finesse, Light, Thrown, Nick"
     },
     {
       "name": "Rapière",
       "bonus": "+2",
       "damage": "1d8+2 Perforant",
-      "properties": "1.5 m. (1 case), Finesse, Vex"
+      "properties": "1,5 m. (1 case), Finesse, Vex"
     }
   ],
   "actions": {
     "action": [],
     "bonusAction": [
       "Inspiration bardique",
-      "Combattre avec deux armes"
+      "Combat à deux armes"
     ],
     "reaction": [],
     "other": [
@@ -262,7 +262,7 @@
       "Armes simples"
     ],
     "tools": [
-      "Kit de dissimulation",
+      "Kit de déguisement",
       "Tambour",
       "Harpe",
       "Luth",
@@ -270,38 +270,22 @@
     ],
     "languages": [
       "Commun",
-      "Langue commune",
+      "Langue des signes courante",
       "Elvish",
       "Infernal"
     ]
   },
-  "features": [
-    {
-      "name": "Traité sombre",
-      "section": "FEATS",
-      "description": "À la discrétion de votre MJ, vous pouvez conclure un Traité sombre."
-    },
-    {
-      "name": "Fil de personnage",
-      "section": "FEATS",
-      "description": "Les fils sont des aspects ajoutés aux personnages à tout moment de leur carrière qui ont un objectif spécifique à court ou à long terme."
-    },
-    {
-      "name": "Runestones",
-      "section": "FEATS",
-      "description": "Au début du parcours d'aventure Sagas du Nord, chaque joueur devrait tirer un Runestone au hasard."
-    }
-  ],
+  "features": [],
   "equipment": [
     {
       "name": "Sac à dos",
       "quantity": 1,
-      "weight": 5
+      "weight": 2.3
     },
     {
       "name": "Sac de couchage",
       "quantity": 1,
-      "weight": 7
+      "weight": 3.2
     },
     {
       "name": "Cloche",
@@ -316,62 +300,62 @@
     {
       "name": "Lanterne à foyer",
       "quantity": 1,
-      "weight": 2
+      "weight": 0.9
     },
     {
       "name": "Costume",
       "quantity": 3,
-      "weight": 4
+      "weight": 1.8
     },
     {
       "name": "Dague",
-      "quantity": 1,
-      "weight": 1
-    },
-    {
-      "name": "Dague",
-      "quantity": 1,
-      "weight": 1
-    },
-    {
-      "name": "Cuir",
-      "quantity": 1,
-      "weight": 10
-    },
-    {
-      "name": "Luth",
-      "quantity": 1,
-      "weight": 2
-    },
-    {
-      "name": "Mirroir",
       "quantity": 1,
       "weight": 0.5
     },
     {
+      "name": "Dague",
+      "quantity": 1,
+      "weight": 0.5
+    },
+    {
+      "name": "Cuir",
+      "quantity": 1,
+      "weight": 4.5
+    },
+    {
+      "name": "Luth",
+      "quantity": 1,
+      "weight": 0.9
+    },
+    {
+      "name": "Mirroir",
+      "quantity": 1,
+      "weight": 0.2
+    },
+    {
       "name": "Huile",
       "quantity": 5,
-      "weight": 1
+      "weight": 0.5
     },
     {
       "name": "Rapière",
       "quantity": 1,
-      "weight": 2
+      "weight": 0.9
     },
     {
       "name": "Rations",
       "quantity": 4,
-      "weight": 2
+      "weight": 0.9
     },
     {
       "name": "Boîte d'allumettes",
       "quantity": 1,
-      "weight": 1
+      "weight": 0.5
     },
     {
       "name": "Outre d'eau",
       "quantity": 1,
-      "weight": 5
+      "weight": 2.3
     }
   ],
   "spells": [
@@ -380,7 +364,7 @@
       "level": 1,
       "school": "Abjuration",
       "castingTime": "1 Action",
-      "range": "Toucher",
+      "range": "Touch",
       "duration": "Instantané",
       "damaging": false,
       "prepared": false
@@ -410,7 +394,7 @@
       "level": 0,
       "school": "Conjuration",
       "castingTime": "1 Action",
-      "range": "9 m. (6 cellules)",
+      "range": "9 m. (6 cases)",
       "duration": "1 Minute",
       "damaging": false,
       "prepared": false
@@ -440,7 +424,7 @@
       "level": 1,
       "school": "Enchantement",
       "castingTime": "1 Action",
-      "range": "9 m. (6 cellules)",
+      "range": "9 m. (6 cases)",
       "duration": "Conc. 1 Minute",
       "damaging": false,
       "prepared": false
@@ -460,7 +444,7 @@
       "level": 0,
       "school": "Transmutation",
       "castingTime": "1 Action",
-      "range": "9 m. (6 cellules)",
+      "range": "9 m. (6 cases)",
       "duration": "1 Minute",
       "damaging": false,
       "prepared": false
@@ -490,7 +474,7 @@
     "height": "165cm",
     "hair": "Pastel",
     "skin": "Clair avec des marques tribales fuschia",
-    "weight": "121"
+    "weight": "54.9 kg"
   },
   "backstory": "Élevée par sa tante au sein d’une troupe d’artistes itinérants, Damaia Dread grandit en ignorant tout de ses parents, si ce n'est ses traits démoniaques (chaleur corporelle, yeux brillants et cornes naissantes) habilement dissimulés sous une excentricité de scène et des coiffures colorées. En canalisant son héritage magique à travers le chant, le maniement des lames et des performances acrobatiques de Barde, elle transforme son énergie démoniaque en véritables spectacles. À l'âge adulte, alors que la pousse de ses cornes menace son camouflage, sa tante lui révèle que son père est un démon issu d'un autre plan. Armée de son talent et de son style unique, Damaia prend la route pour apprendre à maîtriser sa part d'ombre et retrouver la trace de ce père mystérieux.",
   "allies": null
