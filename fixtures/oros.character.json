@@ -1,8 +1,8 @@
 {
   "meta": {
     "source": "dom",
-    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/oros-spells-tab.html",
-    "extractedAt": "2026-11-25T07:52:46.622Z",
+    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/oros.json",
+    "extractedAt": "2026-11-25T10:57:45.881Z",
     "characterId": null,
     "units": {
       "distance": "ft.",

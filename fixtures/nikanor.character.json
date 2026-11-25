@@ -1,0 +1,425 @@
+{
+  "meta": {
+    "source": "dom",
+    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/nikanor.json",
+    "extractedAt": "2026-11-25T10:57:44.279Z",
+    "characterId": null,
+    "units": {
+      "distance": "ft.",
+      "weight": "lb."
+    }
+  },
+  "name": "Nikanor Solenios",
+  "level": 2,
+  "xp": 0,
+  "race": "Human",
+  "size": "Medium or Small",
+  "background": "Nikanor",
+  "alignment": "Lawful Good",
+  "classes": [
+    {
+      "name": "Paladin",
+      "level": 2,
+      "subclass": null
+    }
+  ],
+  "spellcasting": [
+    {
+      "className": "Paladin",
+      "ability": "CHA",
+      "modifier": 2,
+      "attack": 4,
+      "saveDc": 12
+    }
+  ],
+  "abilities": {
+    "STR": {
+      "score": 16,
+      "modifier": 3
+    },
+    "DEX": {
+      "score": 12,
+      "modifier": 1
+    },
+    "CON": {
+      "score": 14,
+      "modifier": 2
+    },
+    "INT": {
+      "score": 8,
+      "modifier": -1
+    },
+    "WIS": {
+      "score": 10,
+      "modifier": 0
+    },
+    "CHA": {
+      "score": 15,
+      "modifier": 2
+    }
+  },
+  "savingThrows": {
+    "STR": {
+      "value": 3,
+      "proficient": false
+    },
+    "DEX": {
+      "value": 1,
+      "proficient": false
+    },
+    "CON": {
+      "value": 2,
+      "proficient": false
+    },
+    "INT": {
+      "value": -1,
+      "proficient": false
+    },
+    "WIS": {
+      "value": 2,
+      "proficient": true
+    },
+    "CHA": {
+      "value": 4,
+      "proficient": true
+    }
+  },
+  "skills": [
+    {
+      "name": "Acrobatics",
+      "ability": "DEX",
+      "value": 3,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Animal Handling",
+      "ability": "WIS",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Arcana",
+      "ability": "INT",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Athletics",
+      "ability": "STR",
+      "value": 5,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Deception",
+      "ability": "CHA",
+      "value": 2,
+      "proficiency": "none"
+    },
+    {
+      "name": "History",
+      "ability": "INT",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Insight",
+      "ability": "WIS",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Intimidation",
+      "ability": "CHA",
+      "value": 4,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Investigation",
+      "ability": "INT",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Medicine",
+      "ability": "WIS",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Nature",
+      "ability": "INT",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Perception",
+      "ability": "WIS",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Performance",
+      "ability": "CHA",
+      "value": 2,
+      "proficiency": "none"
+    },
+    {
+      "name": "Persuasion",
+      "ability": "CHA",
+      "value": 4,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Religion",
+      "ability": "INT",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Sleight of Hand",
+      "ability": "DEX",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Stealth",
+      "ability": "DEX",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Survival",
+      "ability": "WIS",
+      "value": 0,
+      "proficiency": "none"
+    }
+  ],
+  "proficiencyBonus": 2,
+  "armorClass": 18,
+  "initiative": 1,
+  "speed": "30 ft.",
+  "passivePerception": 10,
+  "carryingCapacity": 240,
+  "pushDragLift": 480,
+  "hp": {
+    "current": 20,
+    "max": 20,
+    "temp": null
+  },
+  "hitDice": "2d10",
+  "deathSaves": {
+    "successes": null,
+    "failures": null
+  },
+  "coins": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 25,
+    "pp": 0
+  },
+  "attacks": [
+    {
+      "name": "Longsword",
+      "bonus": "+5",
+      "damage": "1d8+3 Slashing",
+      "properties": "5 ft., Versatile, Sap"
+    },
+    {
+      "name": "Javelin",
+      "bonus": "+5",
+      "damage": "1d6+3 Piercing",
+      "properties": "30/120 ft., Thrown, Slow"
+    }
+  ],
+  "defenses": {
+    "resistances": [],
+    "immunities": [],
+    "vulnerabilities": []
+  },
+  "proficiencies": {
+    "armor": [
+      "Heavy Armor",
+      "Light Armor",
+      "Medium Armor",
+      "Shields"
+    ],
+    "weapons": [
+      "Martial Weapons",
+      "Simple Weapons"
+    ],
+    "tools": [
+      "Cartographer's Tools"
+    ],
+    "languages": [
+      "Common",
+      "Goblin",
+      "Minotaur",
+      "Orc"
+    ]
+  },
+  "features": [
+    {
+      "name": "Great Weapon Fighting",
+      "section": "FEATS",
+      "description": "Fighting Style Feat (Prerequisite: Fighting Style Feature) When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit."
+    },
+    {
+      "name": "Savage Attacker",
+      "section": "FEATS",
+      "description": "Origin Feat You’ve trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon’s damage dice twice and use either roll against the target."
+    },
+    {
+      "name": "Weapon Mastery",
+      "section": "FEATS",
+      "description": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency. Whenever you finish a Long Rest, you can change the kinds of weapons you chose."
+    },
+    {
+      "name": "Dark Bargain",
+      "section": "FEATS",
+      "description": "At your GM's discretion, you can take a Dark Bargain."
+    },
+    {
+      "name": "Character Threads",
+      "section": "FEATS",
+      "description": "Threads are aspects added to characters at any time during their career that have a specific short or long-term goal."
+    },
+    {
+      "name": "Runestones",
+      "section": "FEATS",
+      "description": "At the beginning of the Northlands Sagas adventure path, each player should draw one Runestone randomly."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Backpack",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Blanket",
+      "quantity": 1,
+      "weight": 3
+    },
+    {
+      "name": "Chain Mail",
+      "quantity": 1,
+      "weight": 55
+    },
+    {
+      "name": "Holy Symbol",
+      "quantity": 1,
+      "weight": 0
+    },
+    {
+      "name": "Holy Water",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Javelin",
+      "quantity": 6,
+      "weight": 2
+    },
+    {
+      "name": "Lamp",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Longsword",
+      "quantity": 1,
+      "weight": 3
+    },
+    {
+      "name": "Rations",
+      "quantity": 7,
+      "weight": 2
+    },
+    {
+      "name": "Robe",
+      "quantity": 1,
+      "weight": 4
+    },
+    {
+      "name": "Shield",
+      "quantity": 1,
+      "weight": 6
+    },
+    {
+      "name": "Tinderbox",
+      "quantity": 1,
+      "weight": 1
+    }
+  ],
+  "spells": [
+    {
+      "name": "Shield of Faith",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "Reaction",
+      "range": "60 ft.",
+      "duration": "Conc. 10 Minutes",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Cure Wounds",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "1 Action",
+      "range": "Touch",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Divine Favor",
+      "level": 1,
+      "school": "Transmutation",
+      "castingTime": "Reaction",
+      "range": "Self",
+      "duration": "1 Minute",
+      "damaging": true,
+      "prepared": false
+    },
+    {
+      "name": "Divine Smite",
+      "level": 1,
+      "school": "Evocation",
+      "castingTime": "Reaction",
+      "range": "Self",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    }
+  ],
+  "spellSlots": [
+    2
+  ],
+  "personality": {
+    "traits": [
+      "Je ne perds jamais mon temps à ne rien faire. Si mes bras ne sont pas occupés à tenir une arme, ils sont occupés à faire des pompes. Le corps est un temple qui se forge dans la sueur"
+    ],
+    "ideals": [
+      "La vie ne vaut d'être vécue que si l'on accomplit des exploits capables de traverser les âges et d'inspirer les autres à devenir meilleurs"
+    ],
+    "bonds": [
+      "Le tatouage de l'horreur à crochets sur mon torse me rappelle chaque jour pourquoi je dois devenir plus fort, et pourquoi je ne laisserai plus jamais un compagnon mourir par manque de préparation"
+    ],
+    "flaws": [
+      "Je juge parfois trop vite ceux qui ne partagent pas ma rigueur physique, et ma confiance aveugle en mes propres capacités peut me pousser à sous-estimer des dangers face auxquels la force brute ne suffit pas"
+    ],
+    "appearance": []
+  },
+  "appearance": {
+    "age": "27",
+    "eyes": "Gris acier",
+    "height": "188 cm",
+    "hair": "Châtain foncé",
+    "skin": "Foncée et marquée de petites cicatrices",
+    "weight": "202"
+  },
+  "backstory": "Originaire du plan de Theros, ce paladin a grandi dans le culte de la performance physique et du dépassement de soi, considérant son corps comme une machine de guerre qu'il polit sans relâche à coups de callisthénie. Après avoir régné sur les arènes d'Akros, sa vie bascule lorsque son partenaire d'armes, Kastor, est mortellement empalé par une horreur à crochets importée de l'Outreterre. Gravant le monstre sur son torse en hommage et comme rappel de la rigueur exigée, il quitte son monde d'origine, lassé par la facilité de ses combats locaux. Il prend alors la route pour repousser ses propres limites face à de vrais dangers et trouver des compagnons d'aventure enfin dignes de se battre à ses côtés.",
+  "allies": null
+}

@@ -1,8 +1,8 @@
 {
   "meta": {
     "source": "dom",
-    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/damaia.html",
-    "extractedAt": "2026-11-25T07:52:45.065Z",
+    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/damaia.json",
+    "extractedAt": "2026-11-25T10:57:39.354Z",
     "characterId": null,
     "units": {
       "distance": "ft.",

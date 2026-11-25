@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "source": "dom",
+    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/elowen.json",
+    "extractedAt": "2026-11-25T10:57:40.985Z",
+    "characterId": null,
+    "units": {
+      "distance": "ft.",
+      "weight": "lb."
+    }
+  },
+  "name": "Elowen Guilt-Leaf",
+  "level": 2,
+  "xp": 0,
+  "race": "Elf",
+  "size": "Medium",
+  "background": "Elowen",
+  "alignment": "Chaotic Neutral",
+  "classes": [
+    {
+      "name": "Rogue",
+      "level": 2,
+      "subclass": null
+    }
+  ],
+  "spellcasting": [],
+  "abilities": {
+    "STR": {
+      "score": 8,
+      "modifier": -1
+    },
+    "DEX": {
+      "score": 17,
+      "modifier": 3
+    },
+    "CON": {
+      "score": 14,
+      "modifier": 2
+    },
+    "INT": {
+      "score": 12,
+      "modifier": 1
+    },
+    "WIS": {
+      "score": 10,
+      "modifier": 0
+    },
+    "CHA": {
+      "score": 14,
+      "modifier": 2
+    }
+  },
+  "savingThrows": {
+    "STR": {
+      "value": -1,
+      "proficient": false
+    },
+    "DEX": {
+      "value": 5,
+      "proficient": true
+    },
+    "CON": {
+      "value": 2,
+      "proficient": false
+    },
+    "INT": {
+      "value": 3,
+      "proficient": true
+    },
+    "WIS": {
+      "value": 0,
+      "proficient": false
+    },
+    "CHA": {
+      "value": 2,
+      "proficient": false
+    }
+  },
+  "skills": [
+    {
+      "name": "Acrobatics",
+      "ability": "DEX",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Animal Handling",
+      "ability": "WIS",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Arcana",
+      "ability": "INT",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Athletics",
+      "ability": "STR",
+      "value": 1,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Deception",
+      "ability": "CHA",
+      "value": 6,
+      "proficiency": "expertise"
+    },
+    {
+      "name": "History",
+      "ability": "INT",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Insight",
+      "ability": "WIS",
+      "value": 2,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Intimidation",
+      "ability": "CHA",
+      "value": 2,
+      "proficiency": "none"
+    },
+    {
+      "name": "Investigation",
+      "ability": "INT",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Medicine",
+      "ability": "WIS",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Nature",
+      "ability": "INT",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Perception",
+      "ability": "WIS",
+      "value": 2,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Performance",
+      "ability": "CHA",
+      "value": 2,
+      "proficiency": "none"
+    },
+    {
+      "name": "Persuasion",
+      "ability": "CHA",
+      "value": 2,
+      "proficiency": "none"
+    },
+    {
+      "name": "Religion",
+      "ability": "INT",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Sleight of Hand",
+      "ability": "DEX",
+      "value": 5,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Stealth",
+      "ability": "DEX",
+      "value": 7,
+      "proficiency": "expertise"
+    },
+    {
+      "name": "Survival",
+      "ability": "WIS",
+      "value": 2,
+      "proficiency": "proficient"
+    }
+  ],
+  "proficiencyBonus": 2,
+  "armorClass": 13,
+  "initiative": 3,
+  "speed": "30 ft.",
+  "passivePerception": 12,
+  "carryingCapacity": 120,
+  "pushDragLift": 240,
+  "hp": {
+    "current": 17,
+    "max": 17,
+    "temp": null
+  },
+  "hitDice": "2d8",
+  "deathSaves": {
+    "successes": null,
+    "failures": null
+  },
+  "coins": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 25,
+    "pp": 0
+  },
+  "attacks": [
+    {
+      "name": "Crossbow, Hand",
+      "bonus": "+5",
+      "damage": "1d6+3 Piercing",
+      "properties": "30/120 ft., Ammunition, Range, Light, Loading, Vex"
+    },
+    {
+      "name": "Dagger",
+      "bonus": "+5",
+      "damage": "1d4+3 Piercing",
+      "properties": "20/60 ft., Finesse, Light, Thrown, Nick"
+    },
+    {
+      "name": "Shortsword",
+      "bonus": "+5",
+      "damage": "1d6+3 Piercing",
+      "properties": "5 ft., Finesse, Light, Vex"
+    }
+  ],
+  "defenses": {
+    "resistances": [],
+    "immunities": [
+      {
+        "type": "immunity",
+        "value": "Magical Sleep"
+      }
+    ],
+    "vulnerabilities": []
+  },
+  "proficiencies": {
+    "armor": [
+      "Light Armor"
+    ],
+    "weapons": [
+      "Bola",
+      "Crossbow, Hand",
+      "Rapier",
+      "Scimitar",
+      "Shortsword",
+      "Simple Weapons",
+      "Weighted Chain",
+      "Whip"
+    ],
+    "tools": [
+      "Dice Set",
+      "Disguise Kit",
+      "Thieves' Tools"
+    ],
+    "languages": [
+      "Common",
+      "Common Sign Language",
+      "Elvish",
+      "Goblin",
+      "Thieves’ Cant"
+    ]
+  },
+  "features": [
+    {
+      "name": "Weapon Mastery",
+      "section": "FEATS",
+      "description": "Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency. Whenever you finish a Long Rest, you can change the kinds of weapons you chose."
+    },
+    {
+      "name": "Dark Bargain",
+      "section": "FEATS",
+      "description": "At your GM's discretion, you can take a Dark Bargain."
+    },
+    {
+      "name": "Character Threads",
+      "section": "FEATS",
+      "description": "Threads are aspects added to characters at any time during their career that have a specific short or long-term goal."
+    },
+    {
+      "name": "Runestones",
+      "section": "FEATS",
+      "description": "At the beginning of the Northlands Sagas adventure path, each player should draw one Runestone randomly."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Backpack",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Ball Bearings",
+      "quantity": 1000,
+      "weight": 2
+    },
+    {
+      "name": "Bell",
+      "quantity": 1,
+      "weight": 0
+    },
+    {
+      "name": "Bolts",
+      "quantity": 200,
+      "weight": 1.5
+    },
+    {
+      "name": "Candle",
+      "quantity": 10,
+      "weight": 0
+    },
+    {
+      "name": "Crossbow, Hand",
+      "quantity": 1,
+      "weight": 3
+    },
+    {
+      "name": "Crowbar",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Dagger",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Dagger",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Dart",
+      "quantity": 1,
+      "weight": 0.25
+    },
+    {
+      "name": "Dice Set",
+      "quantity": 1,
+      "weight": 0
+    },
+    {
+      "name": "Disguise Kit",
+      "quantity": 1,
+      "weight": 3
+    },
+    {
+      "name": "Hooded Lantern",
+      "quantity": 1,
+      "weight": 2
+    },
+    {
+      "name": "Leather",
+      "quantity": 1,
+      "weight": 10
+    },
+    {
+      "name": "Mirror",
+      "quantity": 1,
+      "weight": 0.5
+    },
+    {
+      "name": "Oil",
+      "quantity": 5,
+      "weight": 1
+    },
+    {
+      "name": "Quiver",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Rations",
+      "quantity": 5,
+      "weight": 2
+    },
+    {
+      "name": "Rope",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Shortsword",
+      "quantity": 1,
+      "weight": 2
+    },
+    {
+      "name": "Thieves' Tools",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Tinderbox",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Waterskin",
+      "quantity": 1,
+      "weight": 5
+    }
+  ],
+  "spells": [
+    {
+      "name": "Toll the Dead",
+      "level": 0,
+      "school": "Necromancy",
+      "castingTime": "1 Action",
+      "range": "60 ft.",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": false
+    }
+  ],
+  "spellSlots": [],
+  "personality": {
+    "traits": [
+      "Je masque mon visage sous une capuche et j'évite de trop me confier, mais j'exécute chaque geste et chaque vol avec une grâce féerique irréprochable"
+    ],
+    "ideals": [
+      "La Restauration. Je retrouverai ma beauté et mon statut d'origine, peu importe les trésors qu'il me faudra dérober pour y parvenir"
+    ],
+    "bonds": [
+      "La bague en or tressé de ma famille à Lorwyn, portée sous mes vêtements, est mon trésor le plus précieux. Elle me rappelle d'où je viens et où je dois retourner"
+    ],
+    "flaws": [
+      "Mon rejet obsessionnel de ma cicatrice et ma haine envers l'arrogance des personnes parfaites me poussent à prendre des risques imprudents pour toute piste de guérison"
+    ],
+    "appearance": []
+  },
+  "appearance": {
+    "age": "115",
+    "eyes": "Verts",
+    "height": "172",
+    "hair": "Vert sombre",
+    "skin": "Couleur bronze",
+    "weight": "121"
+  },
+  "backstory": "Originaire de Lorwyn, un monde où la beauté est une vertu absolue, tu as été bannie et rejetée par les tiens, y compris par l'arrogant Sylveth et tes propres parents, à la suite d'une chute t'ayant laissé une profonde cicatrice au visage. Recueillie par Kaelen, un autre déchu qui t'a appris l'art de la dissimulation avant de se sacrifier pour te faire emprunter une Voie des Augures, tu as atterri dans une métropole étrangère où un gobelin nommé Jax t'a formée au métier de voleuse. Désormais animée par l'obsession d'effacer ta cicatrice pour revenir sur ton monde et faire ravaler son mépris à Sylveth, tu as repris la route en quête d'une relique curative légendaire, bien décidée à recruter des compagnons pour survivre aux dangers du voyage.",
+  "allies": null
+}

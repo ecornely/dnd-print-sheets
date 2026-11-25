@@ -1,0 +1,471 @@
+{
+  "meta": {
+    "source": "dom",
+    "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/esther.json",
+    "extractedAt": "2026-11-25T10:57:42.639Z",
+    "characterId": null,
+    "units": {
+      "distance": "ft.",
+      "weight": "lb."
+    }
+  },
+  "name": "Esther Vaelis",
+  "level": 2,
+  "xp": 0,
+  "race": "Half-Elf",
+  "size": "Medium",
+  "background": "Esther",
+  "alignment": "Neutral Good",
+  "classes": [
+    {
+      "name": "Sorcerer",
+      "level": 2,
+      "subclass": null
+    }
+  ],
+  "spellcasting": [
+    {
+      "className": "Sorcerer",
+      "ability": "CHA",
+      "modifier": 3,
+      "attack": 5,
+      "saveDc": 13
+    }
+  ],
+  "abilities": {
+    "STR": {
+      "score": 8,
+      "modifier": -1
+    },
+    "DEX": {
+      "score": 14,
+      "modifier": 2
+    },
+    "CON": {
+      "score": 14,
+      "modifier": 2
+    },
+    "INT": {
+      "score": 10,
+      "modifier": 0
+    },
+    "WIS": {
+      "score": 13,
+      "modifier": 1
+    },
+    "CHA": {
+      "score": 17,
+      "modifier": 3
+    }
+  },
+  "savingThrows": {
+    "STR": {
+      "value": -1,
+      "proficient": false
+    },
+    "DEX": {
+      "value": 2,
+      "proficient": false
+    },
+    "CON": {
+      "value": 4,
+      "proficient": true
+    },
+    "INT": {
+      "value": 0,
+      "proficient": false
+    },
+    "WIS": {
+      "value": 1,
+      "proficient": false
+    },
+    "CHA": {
+      "value": 5,
+      "proficient": true
+    }
+  },
+  "skills": [
+    {
+      "name": "Acrobatics",
+      "ability": "DEX",
+      "value": 2,
+      "proficiency": "none"
+    },
+    {
+      "name": "Animal Handling",
+      "ability": "WIS",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Arcana",
+      "ability": "INT",
+      "value": 2,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Athletics",
+      "ability": "STR",
+      "value": -1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Deception",
+      "ability": "CHA",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "History",
+      "ability": "INT",
+      "value": 2,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Insight",
+      "ability": "WIS",
+      "value": 3,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Intimidation",
+      "ability": "CHA",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Investigation",
+      "ability": "INT",
+      "value": 2,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Medicine",
+      "ability": "WIS",
+      "value": 3,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Nature",
+      "ability": "INT",
+      "value": 2,
+      "proficiency": "proficient"
+    },
+    {
+      "name": "Perception",
+      "ability": "WIS",
+      "value": 1,
+      "proficiency": "none"
+    },
+    {
+      "name": "Performance",
+      "ability": "CHA",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Persuasion",
+      "ability": "CHA",
+      "value": 3,
+      "proficiency": "none"
+    },
+    {
+      "name": "Religion",
+      "ability": "INT",
+      "value": 0,
+      "proficiency": "none"
+    },
+    {
+      "name": "Sleight of Hand",
+      "ability": "DEX",
+      "value": 2,
+      "proficiency": "none"
+    },
+    {
+      "name": "Stealth",
+      "ability": "DEX",
+      "value": 2,
+      "proficiency": "none"
+    },
+    {
+      "name": "Survival",
+      "ability": "WIS",
+      "value": 1,
+      "proficiency": "none"
+    }
+  ],
+  "proficiencyBonus": 2,
+  "armorClass": 12,
+  "initiative": 2,
+  "speed": "30 ft.",
+  "passivePerception": 11,
+  "carryingCapacity": 120,
+  "pushDragLift": 240,
+  "hp": {
+    "current": 14,
+    "max": 14,
+    "temp": null
+  },
+  "hitDice": "2d6",
+  "deathSaves": {
+    "successes": null,
+    "failures": null
+  },
+  "coins": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 25,
+    "pp": 0
+  },
+  "attacks": [
+    {
+      "name": "Dagger",
+      "bonus": "+4",
+      "damage": "1d4+2 Piercing",
+      "properties": "20/60 ft., Finesse, Light, Thrown, Nick"
+    },
+    {
+      "name": "Quarterstaff",
+      "bonus": "+1",
+      "damage": "1d6-1 Bludgeoning",
+      "properties": "5 ft., Versatile, Topple"
+    }
+  ],
+  "defenses": {
+    "resistances": [],
+    "immunities": [
+      {
+        "type": "immunity",
+        "value": "Magical Sleep"
+      }
+    ],
+    "vulnerabilities": []
+  },
+  "proficiencies": {
+    "armor": [
+      "None"
+    ],
+    "weapons": [
+      "Simple Weapons"
+    ],
+    "tools": [
+      "Herbalism Kit"
+    ],
+    "languages": [
+      "Abyssal",
+      "Celestial",
+      "Common",
+      "Elvish"
+    ]
+  },
+  "features": [
+    {
+      "name": "Dark Bargain",
+      "section": "FEATS",
+      "description": "At your GM's discretion, you can take a Dark Bargain."
+    },
+    {
+      "name": "Character Threads",
+      "section": "FEATS",
+      "description": "Threads are aspects added to characters at any time during their career that have a specific short or long-term goal."
+    },
+    {
+      "name": "Runestones",
+      "section": "FEATS",
+      "description": "At the beginning of the Northlands Sagas adventure path, each player should draw one Runestone randomly."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Backpack",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Book",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Bullseye Lantern",
+      "quantity": 1,
+      "weight": 2
+    },
+    {
+      "name": "Caltrops",
+      "quantity": 20,
+      "weight": 2
+    },
+    {
+      "name": "Crowbar",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Crystal",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Dagger",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Dagger",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Herbalism Kit",
+      "quantity": 1,
+      "weight": 3
+    },
+    {
+      "name": "Oil",
+      "quantity": 3,
+      "weight": 1
+    },
+    {
+      "name": "Quarterstaff",
+      "quantity": 1,
+      "weight": 4
+    },
+    {
+      "name": "Rations",
+      "quantity": 5,
+      "weight": 2
+    },
+    {
+      "name": "Rope",
+      "quantity": 1,
+      "weight": 5
+    },
+    {
+      "name": "Tinderbox",
+      "quantity": 1,
+      "weight": 1
+    },
+    {
+      "name": "Torch",
+      "quantity": 5,
+      "weight": 1
+    },
+    {
+      "name": "Vial",
+      "quantity": 4,
+      "weight": 0
+    },
+    {
+      "name": "Waterskin",
+      "quantity": 1,
+      "weight": 5
+    }
+  ],
+  "spells": [
+    {
+      "name": "Ray of Sickness",
+      "level": 1,
+      "school": "Necromancy",
+      "castingTime": "1 Action",
+      "range": "60 ft.",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": false
+    },
+    {
+      "name": "Shield",
+      "level": 1,
+      "school": "Abjuration",
+      "castingTime": "1 Turn",
+      "range": "Self",
+      "duration": "1 Round",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Sorcerous Burst",
+      "level": 0,
+      "school": "Evocation",
+      "castingTime": "1 Action",
+      "range": "120 ft.",
+      "duration": "Instantané",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Message",
+      "level": 0,
+      "school": "Transmutation",
+      "castingTime": "1 Action",
+      "range": "120 ft.",
+      "duration": "1 Round",
+      "damaging": false,
+      "prepared": false
+    },
+    {
+      "name": "Shocking Grasp",
+      "level": 0,
+      "school": "Evocation",
+      "castingTime": "1 Action",
+      "range": "Touch",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": false
+    },
+    {
+      "name": "Chaos Bolt",
+      "level": 1,
+      "school": "Evocation",
+      "castingTime": "1 Action",
+      "range": "120 ft.",
+      "duration": "Instantané",
+      "damaging": true,
+      "prepared": false
+    },
+    {
+      "name": "Silent Image",
+      "level": 1,
+      "school": "Illusion",
+      "castingTime": "1 Action",
+      "range": "60 ft.",
+      "duration": "Conc. 10 Minutes",
+      "damaging": false,
+      "prepared": false
+    }
+  ],
+  "spellSlots": [
+    3
+  ],
+  "personality": {
+    "traits": [
+      "Le monde qui m'entoure n'est qu'une suite de dimensions",
+      "malléables. Je perçois les lignes de force là où les autres ne voient que du vide"
+    ],
+    "ideals": [
+      "La magie ne doit pas être une malédiction qui détruit ceux",
+      "que l'on aime. Je trouverai la clé de la faille pour restaurer l'équilibre"
+    ],
+    "bonds": [
+      "Ma sœur Lyra se meurt à cause de l'énergie qui coule dans mes propres veines.",
+      "Je remuerai ciel et terre pour briser sa léthargie"
+    ],
+    "flaws": [
+      "La culpabilité dévorante : Je suis persuadée d'être la cause directe de la",
+      "souffrance de ma famille, ce qui me pousse parfois à prendre des risques inconsidérés ou",
+      "à m'enfoncer dans l'isolement magique"
+    ],
+    "appearance": []
+  },
+  "appearance": {
+    "age": "19",
+    "eyes": "Bleu cristallin",
+    "height": "168",
+    "hair": "Châtain clair",
+    "skin": "Claire avec des marques géométrique bleues",
+    "weight": "127"
+  },
+  "backstory": "Le jour de sa naissance, Esther a été marquée par l’énergie d’une faille extra-planaire qui lui a conféré d’étranges pouvoirs de manipulation de l’espace. Des années plus tard, sa famille adopte Lyra, une fillette amnésique retrouvée au même endroit et arborant les mêmes motifs lumineux sur la peau. Devenues inséparables, les deux sœurs voient leur vie basculer lorsque Lyra sombre mystérieusement dans un coma léthargique causé par le réveil insidieux de ses marques. Convaincue que ce fléau est lié à leur origine commune, Esther prend la route pour maîtriser sa magie, trouver des réponses auprès de spécialistes des plans et réunir les moyens d'extirper sa sœur de ce sommeil mortel.",
+  "allies": null
+}
