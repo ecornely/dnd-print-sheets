@@ -89,10 +89,11 @@
           { "title": "Dégâts & type", "path": "damage", "width": "26%" },
           { "title": "Portée, propriétés", "path": "properties" }
         ] },
-        { "block": "fillBox", "title": "Actions, actions bonus & réactions (dons, traits d'espèce, capacités de classe)", "className": "actions", "grid": 3, "controls": [
-          { "label": "Actions", "control": "textarea", "rows": 6 },
-          { "label": "Actions bonus", "control": "textarea", "rows": 6 },
-          { "label": "Réactions & autres", "control": "textarea", "rows": 6 }
+        { "block": "fillBox", "title": "Actions, actions bonus & réactions (dons, traits d'espèce, capacités de classe)", "className": "actions", "grid": 4, "controls": [
+          { "label": "Actions", "control": "textarea", "rows": 6, "path": "actions.action", "join": "\n" },
+          { "label": "Actions bonus", "control": "textarea", "rows": 6, "path": "actions.bonusAction", "join": "\n" },
+          { "label": "Réactions", "control": "textarea", "rows": 6, "path": "actions.reaction", "join": "\n" },
+          { "label": "Autres (spécial)", "control": "textarea", "rows": 6, "path": "actions.other", "join": "\n" }
         ] },
         { "block": "container", "className": "companion", "blocks": [
           { "block": "fillBox", "title": "Lancement de sorts", "className": "spellcast", "grid": 3, "controls": [

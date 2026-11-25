@@ -2,7 +2,7 @@
   "meta": {
     "source": "dom",
     "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/elowen.json",
-    "extractedAt": "2026-11-25T10:57:40.985Z",
+    "extractedAt": "2026-11-25T12:57:17.185Z",
     "characterId": null,
     "units": {
       "distance": "ft.",
@@ -230,6 +230,20 @@
       "properties": "5 ft., Finesse, Light, Vex"
     }
   ],
+  "actions": {
+    "action": [
+      "Vex (Hand Crossbow)",
+      "Vex (Shortsword)"
+    ],
+    "bonusAction": [
+      "Cunning Action",
+      "Two-Weapon Fighting"
+    ],
+    "reaction": [],
+    "other": [
+      "Sneak Attack"
+    ]
+  },
   "defenses": {
     "resistances": [],
     "immunities": [

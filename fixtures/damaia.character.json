@@ -2,7 +2,7 @@
   "meta": {
     "source": "dom",
     "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/damaia.json",
-    "extractedAt": "2026-11-25T10:57:39.354Z",
+    "extractedAt": "2026-11-25T12:57:15.401Z",
     "characterId": null,
     "units": {
       "distance": "ft.",
@@ -232,6 +232,18 @@
       "properties": "5 ft., Finesse, Vex"
     }
   ],
+  "actions": {
+    "action": [],
+    "bonusAction": [
+      "Bardic Inspiration",
+      "Two-Weapon Fighting"
+    ],
+    "reaction": [],
+    "other": [
+      "Comprehend Languages",
+      "Speak with Animals"
+    ]
+  },
   "defenses": {
     "resistances": [
       {

@@ -2,7 +2,7 @@
   "meta": {
     "source": "dom",
     "sourceRef": "/home/corne/Documents/dev/js/rpg/dom-pipeline/dnd-dom-extract/samples/esther.json",
-    "extractedAt": "2026-11-25T10:57:42.639Z",
+    "extractedAt": "2026-11-25T12:57:19.015Z",
     "characterId": null,
     "units": {
       "distance": "ft.",
@@ -232,6 +232,23 @@
       "properties": "5 ft., Versatile, Topple"
     }
   ],
+  "actions": {
+    "action": [],
+    "bonusAction": [
+      "Font of Magic: Create Spell Slot Level 1",
+      "Innate Sorcery",
+      "Two-Weapon Fighting"
+    ],
+    "reaction": [
+      "Shield"
+    ],
+    "other": [
+      "Font of Magic: Convert Spell Slots",
+      "Font of Magic: Sorcery Points",
+      "Metamagic: Careful Spell",
+      "Metamagic: Distant Spell"
+    ]
+  },
   "defenses": {
     "resistances": [],
     "immunities": [
